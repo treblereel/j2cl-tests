@@ -11,10 +11,29 @@
   <properties>
     <webappdir>${project.build.directory}/webapp</webappdir>
     <webapp.libdir>${webappdir}/WEB-INF/lib</webapp.libdir>
+    <maven.properties.plugin>1.0.0</maven.properties.plugin>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
   <dependencies>
-    <!-- https://mvnrepository.com/artifact/com.google.elemental2/elemental2-promise -->
+
+    <dependency>
+      <groupId>org.gwtproject.safehtml</groupId>
+      <artifactId>gwt-safehtml</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.gwtproject.safehtml</groupId>
+      <artifactId>gwt-safehtml-template-processor</artifactId>
+      <version>${project.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>com.google.code.findbugs</groupId>
+          <artifactId>jsr305</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
 
     <dependency>
       <groupId>com.vertispan.jsinterop</groupId>
@@ -23,37 +42,47 @@
     </dependency>
 
     <dependency>
-      <groupId>com.vertispan.elemental2</groupId>
-      <artifactId>elemental2-core</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.vertispan.elemental2</groupId>
+      <groupId>com.google.elemental2</groupId>
       <artifactId>elemental2-dom</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
+      <version>1.0.0-RC1</version>
     </dependency>
 
     <dependency>
-      <groupId>com.vertispan.elemental2</groupId>
-      <artifactId>elemental2-promise</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
+      <groupId>org.gwtproject.core</groupId>
+      <artifactId>gwt-core</artifactId>
+      <version>1.0-SNAPSHOT</version>
     </dependency>
 
     <dependency>
       <groupId>com.vertispan.j2cl</groupId>
       <artifactId>jre</artifactId>
       <version>0.3-SNAPSHOT</version>
+      <scope>test</scope>
     </dependency>
 
     <dependency>
-      <groupId>com.google.jsinterop</groupId>
-      <artifactId>jsinterop-annotations</artifactId>
-      <version>1.0.2</version>
+      <groupId>com.vertispan.j2cl</groupId>
+      <artifactId>junit-processor</artifactId>
+      <version>0.3-SNAPSHOT</version>
+      <scope>test</scope>
     </dependency>
 
+    <dependency>
+      <groupId>com.vertispan.j2cl</groupId>
+      <artifactId>gwttestcase-emul</artifactId>
+      <version>0.3-SNAPSHOT</version>
+      <scope>source</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
 
   </dependencies>
+
   <build>
     <resources>
       <resource>
@@ -83,9 +112,73 @@
         </executions>
       </plugin>
       <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>properties-maven-plugin</artifactId>
+        <version>${maven.properties.plugin}</version>
+        <executions>
+          <execution>
+            <id>demo</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>set-system-properties</goal>
+            </goals>
+            <configuration>
+              <properties>
+                <property>
+                  <name>ClientBundle.cacheLocation</name>
+                  <value>target/webapp/gwt-cache/</value>
+                </property>
+                <property>
+                  <name>ClientBundle.cacheUrl</name>
+                  <value>/gwt-cache/</value>
+                </property>
+              </properties>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>3.1.0</version>
+        <executions>
+          <execution>
+            <id>custom-resources</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.build.directory}</outputDirectory>
+              <resources>
+                <resource>
+                  <targetPath>${basedir}/target/webapp</targetPath>
+                  <directory>src/main/webapp</directory>
+                  <filtering>true</filtering>
+                </resource>
+                <resource>
+                  <targetPath>${basedir}/target/webapp/classes</targetPath>
+                  <directory>src/main/resources</directory>
+                  <filtering>false</filtering>
+                </resource>
+              </resources>
+              <encoding>UTF-8</encoding>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.12.4</version>
+        <configuration>
+          <skipTests>true</skipTests>
+        </configuration>
+      </plugin>
+      <plugin>
         <groupId>com.vertispan.j2cl</groupId>
         <artifactId>j2cl-maven-plugin</artifactId>
-        <version>0.8-SNAPSHOT</version>
+        <version>0.9-SNAPSHOT</version>
         <executions>
           <execution>
             <id>build-js</id>
@@ -97,20 +190,28 @@
         </executions>
         <configuration>
           <defaultWebappDirectory>${project.build.directory}/gwt/launcherDir</defaultWebappDirectory>
+          <compilationLevel>BUNDLE</compilationLevel>
+<!--
           <compilationLevel>ADVANCED</compilationLevel>
+-->
           <entrypoint>org.treblereel.App</entrypoint>
+          <excludes></excludes>
           <externs>
           </externs>
           <defines>
           </defines>
-          <tests>
-            <test>org.dominokit.samples.tasks.RepositoryTest</test>
-          </tests>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <version>2.2</version>
+        <configuration>
+          <contextFile>${basedir}/src/main/tomcatconf/context.xml</contextFile>
         </configuration>
       </plugin>
     </plugins>
   </build>
-
 
   <pluginRepositories>
     <pluginRepository>
