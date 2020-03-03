@@ -2,13 +2,19 @@ package org.treblereel;
 
 import elemental2.dom.DomGlobal;
 import org.gwtproject.core.client.EntryPoint;
-import org.gwtproject.i18n.client.NumberFormat;
 
 public class App implements EntryPoint {
 
     @Override
     public void onModuleLoad() {
-        NumberFormat formatter = NumberFormat.getFormat("#,###");
-        DomGlobal.console.log(formatter.format(100));
+
+        Person person = new Person();
+        person.setFirstName("Ahmad");
+        person.setLastName("Bawaneh");
+
+        String personJsonString = Person_MapperImpl.INSTANCE
+                .write(person);
+
+        Person person2 = Person_MapperImpl.INSTANCE.read("{\"firstName\":\"Ahmad\",\"lastName\":\"Bawaneh\"}");
     }
 }
