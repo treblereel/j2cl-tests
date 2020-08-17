@@ -43,4 +43,13 @@ public class User {
         this.alive = alive;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "firstName='" + firstName + '\'' +
+                ", sureName='" + sureName + '\'' +
+                ", age=" + age +
+                ", alive=" + alive +
+                '}';
+    }
 }
