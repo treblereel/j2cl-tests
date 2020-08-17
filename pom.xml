@@ -21,6 +21,18 @@
   <dependencies>
     <dependency>
       <groupId>com.google.elemental2</groupId>
+      <artifactId>elemental2-media</artifactId>
+      <version>${elemental2.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.elemental2</groupId>
+      <artifactId>elemental2-webgl</artifactId>
+      <version>${elemental2.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.google.elemental2</groupId>
       <artifactId>elemental2-dom</artifactId>
       <version>${elemental2.version}</version>
     </dependency>
@@ -134,7 +146,13 @@
         </executions>
         <configuration>
           <defaultWebappDirectory>${project.build.directory}/gwt/launcherDir</defaultWebappDirectory>
+          <externs>
+            <extern>src/main/externs/three.js</extern>
+          </externs>
+<!--
           <compilationLevel>ADVANCED</compilationLevel>
+-->
+          <compilationLevel>BUNDLE</compilationLevel>
         </configuration>
       </plugin>
       <plugin>
