@@ -149,10 +149,7 @@
           <externs>
             <extern>src/main/externs/three.js</extern>
           </externs>
-<!--
           <compilationLevel>ADVANCED</compilationLevel>
--->
-          <compilationLevel>BUNDLE</compilationLevel>
         </configuration>
       </plugin>
       <plugin>

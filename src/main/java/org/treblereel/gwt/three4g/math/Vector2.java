@@ -10,7 +10,7 @@ import org.treblereel.gwt.three4g.core.BufferAttribute;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 2/28/18.
  */
-@JsType(isNative = true, name = "Vector2", namespace = "THREE")
+@JsType(isNative = true, name = "THREE.Vector2", namespace = JsPackage.GLOBAL)
 public class Vector2 implements Vector {
 
     /**
