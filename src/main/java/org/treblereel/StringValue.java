@@ -16,16 +16,21 @@
 
 package org.treblereel;
 
+public class StringValue {
+    private String value;
 
-public class DataOutput extends Data<DataOutput> {
-
-    public DataOutput() {
-
+    public StringValue() {
     }
 
-    public DataOutput(String id, String postfix, String name) {
-        this.id = id + "_" + postfix;
-        this.itemSubjectRef = id + "_" + postfix + "Item";
-        this.name = name;
+    public StringValue(String value) {
+        this.value = value;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
     }
 }

@@ -16,16 +16,17 @@
 
 package org.treblereel;
 
+import java.util.List;
 
-public class DataOutput extends Data<DataOutput> {
+public class OutputSet extends Data {
 
-    public DataOutput() {
+    private List<StringValue> dataOutputRefs;
 
+    public List<StringValue> getDataOutputRefs() {
+        return dataOutputRefs;
     }
 
-    public DataOutput(String id, String postfix, String name) {
-        this.id = id + "_" + postfix;
-        this.itemSubjectRef = id + "_" + postfix + "Item";
-        this.name = name;
+    public void setDataOutputRefs(List<StringValue> dataOutputRefs) {
+        this.dataOutputRefs = dataOutputRefs;
     }
 }
