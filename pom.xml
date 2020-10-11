@@ -135,6 +135,11 @@
         <configuration>
           <defaultWebappDirectory>${project.build.directory}/gwt/launcherDir</defaultWebappDirectory>
           <compilationLevel>ADVANCED</compilationLevel>
+          <externs>
+<!--
+            <extern>src/main/externs/html.js</extern>
+-->
+          </externs>
         </configuration>
       </plugin>
       <plugin>

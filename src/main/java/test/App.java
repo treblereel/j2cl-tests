@@ -1,0 +1,17 @@
+package test;
+
+import elemental2.dom.DomGlobal;
+import elemental2.dom.Event;
+import elemental2.dom.EventListener;
+import elemental2.dom.HTMLButtonElement;
+
+public class App {
+
+    public void onModuleLoad() {
+        new HelloWorld();
+        HTMLButtonElement btn = (HTMLButtonElement) DomGlobal.document.createElement("button");
+        btn.textContent = "CLICK ME";
+        btn.addEventListener("click", evt -> DomGlobal.window.alert("HELLO WORLD!"));
+        DomGlobal.document.body.appendChild(btn);
+    }
+}

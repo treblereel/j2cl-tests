@@ -1,1 +1,2 @@
 var XRWebGLLayer;
+var helloWorld;
