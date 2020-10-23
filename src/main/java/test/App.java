@@ -8,7 +8,7 @@ import elemental2.dom.HTMLButtonElement;
 public class App {
 
     public void onModuleLoad() {
-        new HelloWorld();
+        DomGlobal.console.log(new SampleJsModule().helloWorld());
         HTMLButtonElement btn = (HTMLButtonElement) DomGlobal.document.createElement("button");
         btn.textContent = "CLICK ME";
         btn.addEventListener("click", evt -> DomGlobal.window.alert("HELLO WORLD!"));

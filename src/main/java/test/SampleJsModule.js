@@ -1,10 +1,6 @@
-/*goog.declareModuleId('test.HelloWorld');*/
+// goog.declareModuleId('test.SampleJsModule.shim');
 
-goog.module('test.HelloWorld');
-
-
-
-class HelloWorld {
+class SampleJsModule {
     constructor() {
         var messageElement = document.createElement('p')
         var messageContent = document.createTextNode('ZZZ Hello, World! I’m a JavaScript module!')
@@ -12,12 +8,10 @@ class HelloWorld {
         document.body.appendChild(messageElement)
         console.log('The helloWorld function has executed.')
     }
+
+    helloWorld() {
+        return "Hello from a module"
+    }
 }
 
-exports = HelloWorld;
-
-/*
-export { HelloWorld };
-*/
-
-/*export { HelloWorld };*/
+export {SampleJsModule};
