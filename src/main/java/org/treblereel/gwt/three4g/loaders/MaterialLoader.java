@@ -1,7 +1,6 @@
 package org.treblereel.gwt.three4g.loaders;
 
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.loaders.managers.LoadingManager;
 import org.treblereel.gwt.three4g.materials.Material;
@@ -12,7 +11,7 @@ import org.treblereel.gwt.three4g.textures.Texture;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 4/26/18.
  */
-@JsType(isNative = true, name = "THREE.MaterialLoader", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.loaders")
 public class MaterialLoader extends Loader<MaterialLoader, Material> {
 
     /**

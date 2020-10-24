@@ -1,7 +1,6 @@
 package org.treblereel.gwt.three4g.textures;
 
 import elemental2.core.TypedArray;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
@@ -10,7 +9,7 @@ import jsinterop.annotations.JsType;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 10/9/18.
  */
-@JsType(isNative = true, name = "THREE.DataTexture3D", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.textures")
 public class DataTexture3D extends Texture {
 
     /**

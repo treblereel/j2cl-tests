@@ -2,7 +2,6 @@ package org.treblereel.gwt.three4g.materials;
 
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.materials.parameters.PointsMaterialParameters;
 import org.treblereel.gwt.three4g.math.Color;
@@ -14,7 +13,7 @@ import org.treblereel.gwt.three4g.textures.Texture;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 3/19/18.
  */
-@JsType(isNative = true, name = "THREE.PointsMaterial", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.materials")
 public class PointsMaterial extends Material {
 
     /**

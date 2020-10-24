@@ -1,7 +1,6 @@
 package org.treblereel.gwt.three4g.lights;
 
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.core.Object3D;
 import org.treblereel.gwt.three4g.lights.shadows.DirectionalLightShadow;
@@ -17,7 +16,7 @@ import org.treblereel.gwt.three4g.math.Vector3;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 3/21/18.
  */
-@JsType(isNative = true, name = "THREE.DirectionalLight", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.lights")
 public class DirectionalLight extends Light {
 
 

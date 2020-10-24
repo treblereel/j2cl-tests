@@ -1,7 +1,6 @@
 package org.treblereel.gwt.three4g.geometries;
 
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.core.BufferGeometry;
 
@@ -11,7 +10,7 @@ import org.treblereel.gwt.three4g.core.BufferGeometry;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 5/2/18.
  */
-@JsType(isNative = true, name = "THREE.ConeBufferGeometry", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.geometries")
 public class ConeBufferGeometry extends BufferGeometry<ConeBufferGeometry> {
 
     public float radius;

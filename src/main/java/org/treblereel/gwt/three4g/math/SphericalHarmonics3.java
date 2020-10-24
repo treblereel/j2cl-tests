@@ -1,6 +1,5 @@
 package org.treblereel.gwt.three4g.math;
 
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
@@ -8,7 +7,7 @@ import jsinterop.annotations.JsType;
  * @author Dmitrii Tikhomirov
  * Created by treblereel 6/28/20
  */
-@JsType(isNative = true, name = "THREE.SphericalHarmonics3", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.math")
 public class SphericalHarmonics3 {
 
     /**

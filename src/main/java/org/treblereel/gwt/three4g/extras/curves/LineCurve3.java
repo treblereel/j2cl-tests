@@ -1,6 +1,5 @@
 package org.treblereel.gwt.three4g.extras.curves;
 
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.extras.core.Curve;
 import org.treblereel.gwt.three4g.math.Vector3;
@@ -11,7 +10,7 @@ import org.treblereel.gwt.three4g.math.Vector3;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 5/4/18.
  */
-@JsType(isNative = true, name = "THREE.LineCurve3", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.extras.curves")
 public class LineCurve3 extends Curve {
 
     /**

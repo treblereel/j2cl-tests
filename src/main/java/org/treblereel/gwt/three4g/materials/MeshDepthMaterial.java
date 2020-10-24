@@ -1,7 +1,6 @@
 package org.treblereel.gwt.three4g.materials;
 
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.materials.parameters.MeshDepthMaterialParameters;
 import org.treblereel.gwt.three4g.textures.Texture;
@@ -12,7 +11,7 @@ import org.treblereel.gwt.three4g.textures.Texture;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 3/22/18.
  */
-@JsType(isNative = true, name = "THREE.MeshDepthMaterial", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.materials")
 public class MeshDepthMaterial extends Material {
 
 

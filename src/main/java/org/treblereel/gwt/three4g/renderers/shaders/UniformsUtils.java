@@ -1,6 +1,5 @@
 package org.treblereel.gwt.three4g.renderers.shaders;
 
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.materials.parameters.Uniforms;
 
@@ -9,7 +8,7 @@ import org.treblereel.gwt.three4g.materials.parameters.Uniforms;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 6/8/18.
  */
-@JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "THREE.UniformsUtils")
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.renderers.shaders")
 public class UniformsUtils {
 
     public static native Uniforms clone(Uniforms uniforms);

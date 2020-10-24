@@ -1,7 +1,6 @@
 package org.treblereel.gwt.three4g.core;
 
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.cameras.Camera;
 import org.treblereel.gwt.three4g.core.extra.Intersect;
@@ -16,7 +15,7 @@ import org.treblereel.gwt.three4g.math.Vector3;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 3/1/18.
  */
-@JsType(isNative = true, name = "THREE.Raycaster", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.core")
 public class Raycaster {
 
     /**

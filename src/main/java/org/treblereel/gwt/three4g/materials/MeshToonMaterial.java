@@ -1,6 +1,5 @@
 package org.treblereel.gwt.three4g.materials;
 
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.materials.parameters.MeshToonMaterialParameters;
 import org.treblereel.gwt.three4g.textures.Texture;
@@ -11,7 +10,7 @@ import org.treblereel.gwt.three4g.textures.Texture;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 5/3/18.
  */
-@JsType(isNative = true, name = "THREE.MeshToonMaterial", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.materials")
 public class MeshToonMaterial extends MeshPhongMaterial {
 
     /**

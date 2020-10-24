@@ -1,7 +1,6 @@
 package org.treblereel.gwt.three4g.textures;
 
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
@@ -12,7 +11,7 @@ import jsinterop.annotations.JsType;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 4/30/18.
  */
-@JsType(isNative = true, name = "THREE.CompressedTexture", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.textures")
 public class CompressedTexture extends Texture {
 
     /**

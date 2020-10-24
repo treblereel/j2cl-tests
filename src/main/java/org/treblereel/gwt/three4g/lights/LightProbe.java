@@ -1,8 +1,6 @@
 package org.treblereel.gwt.three4g.lights;
 
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import org.treblereel.gwt.three4g.lights.Light;
 import org.treblereel.gwt.three4g.math.SphericalHarmonics3;
 
 /**
@@ -14,7 +12,7 @@ import org.treblereel.gwt.three4g.math.SphericalHarmonics3;
  * @author Dmitrii Tikhomirov
  * Created by treblereel 6/28/20
  */
-@JsType(isNative = true, name = "THREE.LightProbe", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.lights")
 public class LightProbe extends Light {
 
     public SphericalHarmonics3 sh;

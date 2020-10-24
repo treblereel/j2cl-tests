@@ -1,7 +1,6 @@
 package org.treblereel.gwt.three4g.objects;
 
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.core.Object3D;
 import org.treblereel.gwt.three4g.core.Raycaster;
@@ -17,7 +16,7 @@ import org.treblereel.gwt.three4g.math.Vector2;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 4/30/18.
  */
-@JsType(isNative = true, name = "THREE.Sprite", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.objects")
 public class Sprite extends Object3D {
 
     /**

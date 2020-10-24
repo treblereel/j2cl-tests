@@ -1,7 +1,6 @@
 package org.treblereel.gwt.three4g.core;
 
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.core.events.EventDispatcher;
@@ -15,7 +14,7 @@ import org.treblereel.gwt.three4g.math.Vector3;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 12/15/17.
  */
-@JsType(isNative = true, name = "THREE.Object3D", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.core")
 public class Object3D extends EventDispatcher {
 
     /**

@@ -1,7 +1,6 @@
 package org.treblereel.gwt.three4g.materials;
 
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.materials.parameters.ShaderMaterialParameters;
@@ -16,7 +15,7 @@ import org.treblereel.gwt.three4g.renderers.webgl.WebGLProgram;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 4/12/18.
  */
-@JsType(isNative = true, name = "THREE.ShaderMaterial", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.materials")
 public class ShaderMaterial extends Material {
 
     private ShaderMaterialExtensions extensions;

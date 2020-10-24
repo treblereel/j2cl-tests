@@ -1,13 +1,12 @@
 package org.treblereel.gwt.three4g.core.events;
 
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.core.PropertyHolder;
 
 /**
  * JavaScript events for custom objects.
  */
-@JsType(isNative = true, name = "THREE.EventDispatcher", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.core.events")
 public class EventDispatcher extends PropertyHolder {
 
     /**

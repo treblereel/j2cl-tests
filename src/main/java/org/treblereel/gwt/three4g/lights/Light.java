@@ -1,7 +1,6 @@
 package org.treblereel.gwt.three4g.lights;
 
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.core.Object3D;
 import org.treblereel.gwt.three4g.math.Color;
@@ -12,7 +11,7 @@ import org.treblereel.gwt.three4g.math.Color;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 3/16/18.
  */
-@JsType(isNative = true, name = "THREE.Light", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.lights")
 public class Light extends Object3D {
 
     /**

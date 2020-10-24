@@ -1,6 +1,5 @@
 package org.treblereel.gwt.three4g.cameras;
 
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.math.Vector4;
 
@@ -16,7 +15,7 @@ import org.treblereel.gwt.three4g.math.Vector4;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 12/6/17.
  */
-@JsType(isNative = true, name = "THREE.PerspectiveCamera", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.cameras")
 public class PerspectiveCamera extends Camera {
 
     /**

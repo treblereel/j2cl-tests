@@ -1,7 +1,6 @@
 package org.treblereel.gwt.three4g.renderers.webgl;
 
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.core.PropertyHolder;
 import org.treblereel.gwt.three4g.materials.Material;
@@ -12,7 +11,7 @@ import org.treblereel.gwt.three4g.renderers.parameters.WebGLRendererParameters;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 4/12/18.
  */
-@JsType(isNative = true, name = "THREE.WebGLProgram", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.renderers.webgl")
 public class WebGLProgram {
 
     public String id;

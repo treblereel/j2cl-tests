@@ -2,7 +2,6 @@ package org.treblereel.gwt.three4g.math;
 
 import elemental2.core.Float32Array;
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.core.BufferAttribute;
 
@@ -25,7 +24,7 @@ import org.treblereel.gwt.three4g.core.BufferAttribute;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 3/1/18.
  */
-@JsType(isNative = true, name = "THREE.Matrix4", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.math")
 public class Matrix4 implements Matrix {
 
     /**

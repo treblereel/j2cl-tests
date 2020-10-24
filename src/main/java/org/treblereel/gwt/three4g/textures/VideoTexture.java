@@ -2,7 +2,6 @@ package org.treblereel.gwt.three4g.textures;
 
 import elemental2.dom.HTMLVideoElement;
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
@@ -13,7 +12,7 @@ import jsinterop.annotations.JsType;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 4/30/18.
  */
-@JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "THREE.VideoTexture")
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.textures")
 public class VideoTexture extends Texture {
 
     /**

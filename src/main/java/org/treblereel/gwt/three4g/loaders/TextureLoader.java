@@ -1,6 +1,5 @@
 package org.treblereel.gwt.three4g.loaders;
 
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.loaders.managers.LoadingManager;
 import org.treblereel.gwt.three4g.textures.Texture;
@@ -10,7 +9,7 @@ import org.treblereel.gwt.three4g.textures.Texture;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 3/5/18.
  */
-@JsType(isNative = true, name = "THREE.TextureLoader", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.loaders")
 public class TextureLoader extends Loader<TextureLoader, Texture> {
 
     /**

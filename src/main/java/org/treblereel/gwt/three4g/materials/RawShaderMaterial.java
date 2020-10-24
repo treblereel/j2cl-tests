@@ -1,6 +1,5 @@
 package org.treblereel.gwt.three4g.materials;
 
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.materials.parameters.RawShaderMaterialParameters;
 
@@ -10,7 +9,7 @@ import org.treblereel.gwt.three4g.materials.parameters.RawShaderMaterialParamete
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 5/3/18.
  */
-@JsType(isNative = true, name = "THREE.RawShaderMaterial", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.materials")
 public class RawShaderMaterial extends ShaderMaterial {
 
     /**

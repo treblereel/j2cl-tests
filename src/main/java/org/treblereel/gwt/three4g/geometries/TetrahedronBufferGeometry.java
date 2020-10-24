@@ -1,6 +1,5 @@
 package org.treblereel.gwt.three4g.geometries;
 
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.core.BufferGeometry;
 import org.treblereel.gwt.three4g.geometries.parameters.TetrahedronGeometryParameters;
@@ -11,7 +10,7 @@ import org.treblereel.gwt.three4g.geometries.parameters.TetrahedronGeometryParam
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 5/3/18.
  */
-@JsType(isNative = true, name = "THREE.TetrahedronBufferGeometry", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.geometries")
 public class TetrahedronBufferGeometry extends BufferGeometry<TextBufferGeometry> {
 
     public TetrahedronGeometryParameters parameters;

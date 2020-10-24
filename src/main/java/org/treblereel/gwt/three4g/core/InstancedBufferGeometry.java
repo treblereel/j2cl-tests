@@ -1,6 +1,5 @@
 package org.treblereel.gwt.three4g.core;
 
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
@@ -9,7 +8,7 @@ import jsinterop.annotations.JsType;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 4/30/18.
  */
-@JsType(isNative = true, name = "THREE.InstancedBufferGeometry", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.core")
 public class InstancedBufferGeometry extends BufferGeometry {
 
     /**

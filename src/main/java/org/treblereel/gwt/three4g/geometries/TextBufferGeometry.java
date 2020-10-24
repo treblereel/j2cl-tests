@@ -1,6 +1,5 @@
 package org.treblereel.gwt.three4g.geometries;
 
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.core.BufferGeometry;
 import org.treblereel.gwt.three4g.geometries.parameters.TextGeometryParameters;
@@ -13,7 +12,7 @@ import org.treblereel.gwt.three4g.geometries.parameters.TextGeometryParameters;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 5/3/18.
  */
-@JsType(isNative = true, name = "THREE.TextBufferGeometry", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.geometries")
 public class TextBufferGeometry extends BufferGeometry<TextBufferGeometry> {
 
     public TextGeometryParameters parameters;

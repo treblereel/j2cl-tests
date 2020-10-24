@@ -7,7 +7,7 @@ import jsinterop.annotations.JsType;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 5/24/18.
  */
-@JsType(isNative = true, name = "THREE.MOUSE", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "Object")
 public class Mouse {
 
     public static int LEFT;

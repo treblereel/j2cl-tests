@@ -1,7 +1,6 @@
 package org.treblereel.gwt.three4g.lights.shadows;
 
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.cameras.Camera;
 
@@ -11,7 +10,7 @@ import org.treblereel.gwt.three4g.cameras.Camera;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 3/21/18.
  */
-@JsType(isNative = true, name = "THREE.DirectionalLightShadow", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.lights.shadows")
 public class DirectionalLightShadow extends LightShadow {
 
     /**

@@ -2,7 +2,6 @@ package org.treblereel.gwt.three4g.core.bufferattributes;
 
 import elemental2.core.JsArray;
 import elemental2.core.Uint8ClampedArray;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.core.BufferAttribute;
 
@@ -10,7 +9,7 @@ import org.treblereel.gwt.three4g.core.BufferAttribute;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 5/29/18.
  */
-@JsType(isNative = true, name = "THREE.Uint8ClampedBufferAttribute", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.core.bufferattributes")
 public class Uint8ClampedBufferAttribute extends BufferAttribute<Integer, Uint8ClampedBufferAttribute> {
 
     /**

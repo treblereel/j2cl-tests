@@ -1,7 +1,6 @@
 package org.treblereel.gwt.three4g.objects;
 
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.core.BufferGeometry;
 import org.treblereel.gwt.three4g.materials.Material;
@@ -13,7 +12,7 @@ import org.treblereel.gwt.three4g.math.Matrix4;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 4/30/18.
  */
-@JsType(isNative = true, name = "THREE.SkinnedMesh", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.objects")
 public class SkinnedMesh extends Mesh {
 
     /**

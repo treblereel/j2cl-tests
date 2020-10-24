@@ -8,7 +8,7 @@ import org.treblereel.gwt.three4g.core.Object3D;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 4/30/18.
  */
-@JsType(namespace = JsPackage.GLOBAL, isNative = true, name = "Object")
+@JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "Object")
 public class LODLevel {
 
     public Object3D object;

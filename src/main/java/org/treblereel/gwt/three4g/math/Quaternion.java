@@ -1,7 +1,6 @@
 package org.treblereel.gwt.three4g.math;
 
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import jsinterop.base.JsArrayLike;
 
@@ -11,7 +10,7 @@ import jsinterop.base.JsArrayLike;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 3/1/18.
  */
-@JsType(isNative = true, name = "THREE.Quaternion", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.math")
 public class Quaternion {
 
     /**

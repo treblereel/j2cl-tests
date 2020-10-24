@@ -1,16 +1,13 @@
 package org.treblereel.gwt.three4g.core;
 
 import elemental2.core.TypedArray;
-import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
-import org.treblereel.gwt.three4g.core.bufferattributes.Uint16BufferAttribute;
 
 /**
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 4/30/18.
  */
-@JsType(isNative = true, name = "THREE.InterleavedBufferAttribute", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.core")
 public class InterleavedBufferAttribute extends BufferAttribute<Number, InterleavedBufferAttribute>{
 
     /**

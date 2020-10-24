@@ -1,7 +1,6 @@
 package org.treblereel.gwt.three4g.geometries;
 
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.core.Geometry;
 import org.treblereel.gwt.three4g.geometries.parameters.BoxGeometryParameters;
@@ -13,7 +12,7 @@ import org.treblereel.gwt.three4g.geometries.parameters.BoxGeometryParameters;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 3/7/18.
  */
-@JsType(isNative = true, name = "THREE.BoxGeometry", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.geometries")
 public class BoxGeometry extends Geometry {
 
     public BoxGeometryParameters parameters;

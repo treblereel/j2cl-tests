@@ -1,6 +1,5 @@
 package org.treblereel.gwt.three4g.renderers;
 
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.renderers.parameters.WebGLRenderTargetParameters;
 import org.treblereel.gwt.three4g.textures.Texture;
@@ -9,7 +8,7 @@ import org.treblereel.gwt.three4g.textures.Texture;
  * @author Dmitrii Tikhomirov
  * Created by treblereel 6/28/20
  */
-@JsType(isNative = true, name = "THREE.WebGLCubeRenderTarget", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.renderers")
 public class WebGLCubeRenderTarget extends WebGLRenderTarget {
 
     public WebGLCubeRenderTarget(WebGLRenderTargetParameters params) {

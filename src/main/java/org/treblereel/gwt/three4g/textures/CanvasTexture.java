@@ -2,7 +2,6 @@ package org.treblereel.gwt.three4g.textures;
 
 import elemental2.dom.HTMLElement;
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
@@ -14,7 +13,7 @@ import jsinterop.annotations.JsType;
  * <p>
  * Created by treblereel on 4/30/18.
  */
-@JsType(isNative = true, name = "THREE.CanvasTexture", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.textures")
 public class CanvasTexture extends Texture {
 
     /**

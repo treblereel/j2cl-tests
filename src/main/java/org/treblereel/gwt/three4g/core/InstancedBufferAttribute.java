@@ -1,7 +1,6 @@
 package org.treblereel.gwt.three4g.core;
 
 import elemental2.core.TypedArray;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
@@ -10,7 +9,7 @@ import jsinterop.annotations.JsType;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 4/30/18.
  */
-@JsType(isNative = true, name = "THREE.InstancedBufferAttribute", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.core")
 public class InstancedBufferAttribute extends BufferAttribute<Number, InstancedBufferAttribute> {
 
     /**

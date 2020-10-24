@@ -1,7 +1,6 @@
 package org.treblereel.gwt.three4g.extras.core;
 
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.math.Vector2;
 
@@ -12,7 +11,7 @@ import org.treblereel.gwt.three4g.math.Vector2;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 4/27/18.
  */
-@JsType(isNative = true, name = "THREE.ShapePath", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.extras.core")
 public class ShapePath {
 
     /**

@@ -1,7 +1,6 @@
 package org.treblereel.gwt.three4g.lights;
 
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
@@ -16,7 +15,7 @@ import jsinterop.annotations.JsType;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 4/25/18.
  */
-@JsType(isNative = true, name = "THREE.RectAreaLight", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.lights")
 public class RectAreaLight extends Light {
 
     /**

@@ -2,7 +2,6 @@ package org.treblereel.gwt.three4g.loaders;
 
 import elemental2.dom.File;
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.loaders.managers.LoadingManager;
 
@@ -17,7 +16,7 @@ import org.treblereel.gwt.three4g.loaders.managers.LoadingManager;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 4/26/18.
  */
-@JsType(isNative = true, name = "THREE.FileLoader", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.loaders")
 public class FileLoader extends Loader<FileLoader, File> {
 
     /**

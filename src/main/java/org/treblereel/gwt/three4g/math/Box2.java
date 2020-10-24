@@ -1,6 +1,5 @@
 package org.treblereel.gwt.three4g.math;
 
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
@@ -9,7 +8,7 @@ import jsinterop.annotations.JsType;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 5/30/18.
  */
-@JsType(isNative = true, name = "THREE.Box2", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.math")
 public class Box2 {
 
     /**

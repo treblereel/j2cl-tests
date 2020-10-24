@@ -1,6 +1,5 @@
 package org.treblereel.gwt.three4g.math;
 
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.core.Object3D;
 
@@ -12,7 +11,7 @@ import org.treblereel.gwt.three4g.core.Object3D;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 8/16/18.
  */
-@JsType(isNative = true, name = "THREE.Frustum", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.math")
 public class Frustum {
 
     /**

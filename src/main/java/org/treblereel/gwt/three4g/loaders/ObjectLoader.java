@@ -1,7 +1,6 @@
 package org.treblereel.gwt.three4g.loaders;
 
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.core.Object3D;
 import org.treblereel.gwt.three4g.core.PropertyHolder;
@@ -47,7 +46,7 @@ import org.treblereel.gwt.three4g.textures.Texture;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 3/12/18.
  */
-@JsType(isNative = true, name = "THREE.ObjectLoader", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.loaders")
 public class ObjectLoader {
 
     /**

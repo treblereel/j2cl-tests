@@ -1,6 +1,5 @@
 package org.treblereel.gwt.three4g.materials;
 
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.materials.parameters.MeshMatcapMaterialParameters;
 import org.treblereel.gwt.three4g.math.Color;
@@ -8,7 +7,7 @@ import org.treblereel.gwt.three4g.math.Vector2;
 import org.treblereel.gwt.three4g.textures.Texture;
 
 /** @author Dmitrii Tikhomirov Created by treblereel 12/14/18 */
-@JsType(isNative = true, name = "THREE.MeshMatcapMaterial", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.materials")
 public class MeshMatcapMaterial extends Material {
 
   public Texture alphaMap;

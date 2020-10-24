@@ -1,7 +1,6 @@
 package org.treblereel.gwt.three4g.geometries;
 
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.core.AbstractGeometry;
 import org.treblereel.gwt.three4g.core.Geometry;
@@ -12,7 +11,7 @@ import org.treblereel.gwt.three4g.core.Geometry;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 5/2/18.
  */
-@JsType(isNative = true, name = "THREE.EdgesGeometry", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.geometries")
 public class EdgesGeometry extends Geometry {
 
     /**

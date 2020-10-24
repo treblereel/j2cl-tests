@@ -2,7 +2,6 @@ package org.treblereel.gwt.three4g.extras.core;
 
 import elemental2.core.JsObject;
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
@@ -13,7 +12,7 @@ import jsinterop.annotations.JsType;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 4/26/18.
  */
-@JsType(isNative = true, name = "THREE.Font", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.extras.core")
 public class Font {
 
     /**

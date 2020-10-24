@@ -20,7 +20,7 @@ import java.util.HashMap;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 3/21/18.
  */
-@JsType(isNative = true, name = "THREE.BufferGeometry", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.core")
 public class BufferGeometry<T extends BufferGeometry> extends AbstractGeometry<T> {
 
     @JsType(namespace = JsPackage.GLOBAL, isNative = true, name = "Object")

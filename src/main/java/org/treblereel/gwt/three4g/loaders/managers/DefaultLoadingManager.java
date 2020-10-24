@@ -1,7 +1,6 @@
 package org.treblereel.gwt.three4g.loaders.managers;
 
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 
 /**
@@ -12,7 +11,7 @@ import jsinterop.annotations.JsType;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 4/26/18.
  */
-@JsType(isNative = true, name = "THREE.DefaultLoadingManager", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.loaders.managers")
 public class DefaultLoadingManager extends LoadingManager {
 
     @JsConstructor

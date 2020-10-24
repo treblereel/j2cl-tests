@@ -3,7 +3,6 @@ package org.treblereel.gwt.three4g.textures;
 import elemental2.dom.HTMLImageElement;
 import elemental2.dom.ImageData;
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.core.events.EventDispatcher;
@@ -15,7 +14,7 @@ import org.treblereel.gwt.three4g.math.Vector2;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 3/1/18.
  */
-@JsType(isNative = true, name = "THREE.Texture", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.textures")
 public class Texture extends EventDispatcher {
 
     /**

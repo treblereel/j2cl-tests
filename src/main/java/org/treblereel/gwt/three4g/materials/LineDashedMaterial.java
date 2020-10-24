@@ -2,7 +2,6 @@ package org.treblereel.gwt.three4g.materials;
 
 import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.materials.parameters.LineDashedMaterialParameters;
 import org.treblereel.gwt.three4g.math.Color;
@@ -13,7 +12,7 @@ import org.treblereel.gwt.three4g.math.Color;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 4/25/18.
  */
-@JsType(isNative = true, name = "THREE.LineDashedMaterial", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.materials")
 public class LineDashedMaterial extends Material {
 
     /**

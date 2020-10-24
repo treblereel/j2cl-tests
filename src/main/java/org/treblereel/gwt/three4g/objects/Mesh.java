@@ -1,7 +1,6 @@
 package org.treblereel.gwt.three4g.objects;
 
 import jsinterop.annotations.JsConstructor;
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.core.AbstractGeometry;
 import org.treblereel.gwt.three4g.core.Object3D;
@@ -11,7 +10,7 @@ import org.treblereel.gwt.three4g.materials.Material;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 3/8/18.
  */
-@JsType(isNative = true, name = "THREE.Mesh", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.objects")
 public class Mesh extends Object3D {
 
     /**
