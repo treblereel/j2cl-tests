@@ -32,7 +32,9 @@ public class App {
         camera.position.z = 400;
 
         scene = new Scene();
-        Texture texture = new TextureLoader().load("https://threejs.org/examples/textures/crate.gif");
+        String url = "https://threejs.org/examples/textures/crate.gif";
+        TextureLoader textureLoader = new TextureLoader();
+        Texture texture = textureLoader.load(url);
 
         BoxBufferGeometry geometry = new BoxBufferGeometry(200, 200, 200);
         MeshBasicMaterialParameters meshBasicMaterialParameters = new MeshBasicMaterialParameters();

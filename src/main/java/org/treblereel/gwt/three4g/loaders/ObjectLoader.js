@@ -417,17 +417,19 @@ ObjectLoader.prototype = Object.assign( Object.create( Loader.prototype ), {
 
 					case 'Geometry':
 
-						if ( 'THREE' in window && 'LegacyJSONLoader' in THREE ) {
+/*						if ( 'THREE' in window && 'LegacyJSONLoader' in THREE ) {
 
 							var geometryLoader = new THREE.LegacyJSONLoader();
 							geometry = geometryLoader.parse( data, this.resourcePath ).geometry;
 
 
-						} else {
+						} else {*/
 
 							console.error( 'THREE.ObjectLoader: You have to import LegacyJSONLoader in order load geometry data of type "Geometry".' );
 
+/*
 						}
+*/
 
 						break;
 
