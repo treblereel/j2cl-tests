@@ -1,3 +1,3 @@
-import * as module from './IcosahedronGeometry.js';
+import {IcosahedronGeometry} from './IcosahedronGeometry.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.geometries.IcosahedronGeometry.shim');
-export {module};
+export {IcosahedronGeometry};

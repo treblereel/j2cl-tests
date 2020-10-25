@@ -1,3 +1,3 @@
-import * as module from './SpotLightHelper.js';
+import {SpotLightHelper} from './SpotLightHelper.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.helpers.SpotLightHelper.shim');
-export {module};
+export {SpotLightHelper};

@@ -1,3 +1,3 @@
-import * as module from './BufferGeometry.js';
+import {BufferGeometry} from './BufferGeometry.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.core.BufferGeometry.shim');
-export {module};
+export {BufferGeometry};

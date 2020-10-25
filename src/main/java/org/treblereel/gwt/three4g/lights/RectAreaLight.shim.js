@@ -1,3 +1,3 @@
-import * as module from './RectAreaLight.js';
+import {RectAreaLight} from './RectAreaLight.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.lights.RectAreaLight.shim');
-export {module};
+export {RectAreaLight};

@@ -1,3 +1,3 @@
-import * as module from './Light.js';
+import {Light} from './Light.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.lights.Light.shim');
-export {module};
+export {Light};

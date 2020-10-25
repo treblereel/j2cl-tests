@@ -1,3 +1,3 @@
-import * as module from './GridHelper.js';
+import {GridHelper} from './GridHelper.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.helpers.GridHelper.shim');
-export {module};
+export {GridHelper};

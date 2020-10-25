@@ -1,3 +1,3 @@
-import * as module from './BoxHelper.js';
+import {BoxHelper} from './BoxHelper.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.helpers.BoxHelper.shim');
-export {module};
+export {BoxHelper};

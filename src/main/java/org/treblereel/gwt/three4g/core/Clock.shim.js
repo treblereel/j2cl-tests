@@ -1,3 +1,3 @@
-import * as module from './Clock.js';
+import {Clock} from './Clock.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.core.Clock.shim');
-export {module};
+export {Clock};

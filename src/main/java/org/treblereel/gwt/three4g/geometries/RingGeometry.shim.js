@@ -1,3 +1,3 @@
-import * as module from './RingGeometry.js';
+import {RingGeometry} from './RingGeometry.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.geometries.RingGeometry.shim');
-export {module};
+export {RingGeometry};

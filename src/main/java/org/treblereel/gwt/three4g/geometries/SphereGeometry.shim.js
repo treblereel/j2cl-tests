@@ -1,3 +1,3 @@
-import * as module from './SphereGeometry.js';
+import {SphereGeometry} from './SphereGeometry.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.geometries.SphereGeometry.shim');
-export {module};
+export {SphereGeometry};

@@ -1,3 +1,3 @@
-import * as module from './QuadraticBezierCurve.js';
+import {QuadraticBezierCurve} from './QuadraticBezierCurve.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.extras.curves.QuadraticBezierCurve.shim');
-export {module};
+export {QuadraticBezierCurve};

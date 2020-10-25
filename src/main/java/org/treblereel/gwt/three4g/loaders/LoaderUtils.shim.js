@@ -1,3 +1,3 @@
-import * as module from './LoaderUtils.js';
+import {LoaderUtils} from './LoaderUtils.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.loaders.LoaderUtils.shim');
-export {module};
+export {LoaderUtils};

@@ -1,3 +1,3 @@
-import * as module from './FontLoader.js';
+import {FontLoader} from './FontLoader.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.loaders.FontLoader.shim');
-export {module};
+export {FontLoader};

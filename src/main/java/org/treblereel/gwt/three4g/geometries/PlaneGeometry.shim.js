@@ -1,3 +1,3 @@
-import * as module from './PlaneGeometry.js';
+import {PlaneGeometry} from './PlaneGeometry.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.geometries.PlaneGeometry.shim');
-export {module};
+export {PlaneGeometry};

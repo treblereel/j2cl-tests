@@ -1,3 +1,3 @@
-import * as module from './OctahedronGeometry.js';
+import {OctahedronGeometry} from './OctahedronGeometry.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.geometries.OctahedronGeometry.shim');
-export {module};
+export {OctahedronGeometry};
