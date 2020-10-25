@@ -1,3 +1,3 @@
-import * as module from './Vector3.js';
+import {Vector3} from './Vector3.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.math.Vector3.shim');
-export {module};
+export {Vector3};

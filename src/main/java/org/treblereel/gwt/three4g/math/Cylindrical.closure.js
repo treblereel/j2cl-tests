@@ -1,3 +1,3 @@
 goog.module('org.treblereel.gwt.three4g.math.Cylindrical');
 const shim = goog.require('org.treblereel.gwt.three4g.math.Cylindrical.shim');
-exports = shim.module;
+exports = shim.Cylindrical;

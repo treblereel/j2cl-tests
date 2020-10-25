@@ -1,3 +1,3 @@
-import * as module from './Bone.js';
+import {Bone} from './Bone.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.objects.Bone.shim');
-export {module};
+export {Bone};

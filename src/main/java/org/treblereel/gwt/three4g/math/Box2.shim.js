@@ -1,3 +1,3 @@
-import * as module from './Box2.js';
+import {Box2} from './Box2.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.math.Box2.shim');
-export {module};
+export {Box2};

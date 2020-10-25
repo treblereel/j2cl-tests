@@ -15,7 +15,6 @@ import org.treblereel.gwt.three4g.math.Vector3;
  */
 @JsType(namespace = JsPackage.GLOBAL, isNative = true, name = "Object")
 public class AbstractGeometry<T> extends EventDispatcher {
-    T t;
 
     /**
      * Optional name for this bufferGeometry instance. Default is an empty string.

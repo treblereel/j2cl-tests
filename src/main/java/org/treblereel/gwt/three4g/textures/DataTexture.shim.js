@@ -1,3 +1,3 @@
-import * as module from './DataTexture.js';
+import {DataTexture} from './DataTexture.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.textures.DataTexture.shim');
-export {module};
+export {DataTexture};

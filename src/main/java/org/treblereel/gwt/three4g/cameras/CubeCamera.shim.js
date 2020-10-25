@@ -1,3 +1,3 @@
-import * as module from './CubeCamera.js';
+import {CubeCamera} from './CubeCamera.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.cameras.CubeCamera.shim');
-export {module};
+export {CubeCamera};

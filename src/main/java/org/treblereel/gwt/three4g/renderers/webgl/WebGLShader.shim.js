@@ -1,3 +1,3 @@
-import * as module from './WebGLShader.js';
+import {WebGLShader} from './WebGLShader.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.renderers.webgl.WebGLShader.shim');
-export {module};
+export {WebGLShader};

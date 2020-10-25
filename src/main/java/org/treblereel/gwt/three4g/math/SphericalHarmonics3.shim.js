@@ -1,3 +1,3 @@
-import * as module from './SphericalHarmonics3.js';
+import {SphericalHarmonics3} from './SphericalHarmonics3.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.math.SphericalHarmonics3.shim');
-export {module};
+export {SphericalHarmonics3};

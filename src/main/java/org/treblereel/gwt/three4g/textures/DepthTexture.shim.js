@@ -1,3 +1,3 @@
-import * as module from './DepthTexture.js';
+import {DepthTexture} from './DepthTexture.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.textures.DepthTexture.shim');
-export {module};
+export {DepthTexture};

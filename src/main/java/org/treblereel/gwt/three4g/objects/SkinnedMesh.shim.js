@@ -1,3 +1,3 @@
-import * as module from './SkinnedMesh.js';
+import {SkinnedMesh} from './SkinnedMesh.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.objects.SkinnedMesh.shim');
-export {module};
+export {SkinnedMesh};
