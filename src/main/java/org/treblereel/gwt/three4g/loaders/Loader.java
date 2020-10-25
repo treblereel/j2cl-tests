@@ -1,11 +1,10 @@
 package org.treblereel.gwt.three4g.loaders;
 
-import jsinterop.annotations.JsPackage;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.loaders.managers.LoadingManager;
 
 /** @author Dmitrii Tikhomirov Created by treblereel on 10/9/18. */
-@JsType(isNative = true, name = "THREE.Loader", namespace = JsPackage.GLOBAL)
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.loaders")
 public abstract class Loader<L, V> {
 
   /**

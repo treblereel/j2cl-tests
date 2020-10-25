@@ -5,6 +5,7 @@ import elemental2.dom.HTMLElement;
 import elemental2.webgl.WebGLContextAttributes;
 import elemental2.webgl.WebGLRenderingContext;
 import jsinterop.annotations.JsConstructor;
+import jsinterop.annotations.JsOptional;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.cameras.Camera;
@@ -176,13 +177,12 @@ public class WebGLRenderer {
      */
     public WebVRManager vr;
 
-    @JsConstructor
     public WebGLRenderer() {
 
     }
 
     @JsConstructor
-    public WebGLRenderer(WebGLRendererParameters params) {
+    public WebGLRenderer(@JsOptional WebGLRendererParameters params) {
 
     }
 

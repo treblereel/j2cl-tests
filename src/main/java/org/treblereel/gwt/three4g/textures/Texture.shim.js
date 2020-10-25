@@ -1,3 +1,3 @@
-import * as module from './Texture.js';
+import {Texture} from './Texture.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.textures.Texture.shim');
-export {module};
+export {Texture};

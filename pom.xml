@@ -145,11 +145,11 @@
           </execution>
         </executions>
         <configuration>
-          <defaultWebappDirectory>${project.build.directory}/gwt/launcherDir</defaultWebappDirectory>
+          <defaultWebappDirectory>${project.build.directory}/gwt/launcherDir/</defaultWebappDirectory>
           <externs>
-            <extern>src/main/externs/three.js</extern>
+            <extern>src/main/externs/externs.js</extern>
           </externs>
-          <compilationLevel>BUNDLE</compilationLevel>
+          <compilationLevel>BUNDLE_JAR</compilationLevel>
         </configuration>
       </plugin>
       <plugin>
