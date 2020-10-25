@@ -1,3 +1,3 @@
-import * as module from './ColorKeyframeTrack.js';
+import {ColorKeyframeTrack} from './ColorKeyframeTrack.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.animation.tracks.ColorKeyframeTrack.shim');
-export {module};
+export {ColorKeyframeTrack};

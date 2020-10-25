@@ -1,3 +1,3 @@
-import * as module from './QuaternionKeyframeTrack.js';
+import {QuaternionKeyframeTrack} from './QuaternionKeyframeTrack.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.animation.tracks.QuaternionKeyframeTrack.shim');
-export {module};
+export {QuaternionKeyframeTrack};
