@@ -15,6 +15,11 @@ const _vcp = /*@__PURE__*/ new Vector3();
 
 class Triangle {
 
+    /**
+    * @param {Vector3=} a
+    * @param {Vector3=} b
+    * @param {Vector3=} c
+    */
 	constructor( a, b, c ) {
 
 		this.a = ( a !== undefined ) ? a : new Vector3();

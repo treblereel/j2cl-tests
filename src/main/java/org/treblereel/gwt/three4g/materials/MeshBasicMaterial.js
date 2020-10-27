@@ -35,6 +35,7 @@ import { Color } from '../math/Color.js';
  */
 
 /**
+* @constructor
 * @param {Object=} parameters
 */
 function MeshBasicMaterial( parameters ) {

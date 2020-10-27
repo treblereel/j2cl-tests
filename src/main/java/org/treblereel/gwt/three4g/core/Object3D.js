@@ -25,6 +25,9 @@ const _zAxis = new Vector3( 0, 0, 1 );
 const _addedEvent = { type: 'added' };
 const _removedEvent = { type: 'removed' };
 
+/**
+ * @constructor
+ */
 function Object3D() {
 
 	Object.defineProperty( this, 'id', { value: _object3DId ++ } );
@@ -109,9 +112,6 @@ function Object3D() {
 
 Object3D.DefaultUp = new Vector3( 0, 1, 0 );
 Object3D.DefaultMatrixAutoUpdate = true;
-/**
- * @constructor
- */
 Object3D.prototype = Object.assign( Object.create( EventDispatcher.prototype ), {
 
 	constructor: Object3D,
