@@ -138,6 +138,11 @@ public class Box3 {
     public native Sphere getBoundingSphere(Sphere target);
 
     /**
+     * @return Returns the center point of the box as a Vector3.
+     */
+    public native Vector3 getCenter();
+
+    /**
      * @param target — the result will be copied into this Vector3.
      * @return Returns the center point of the box as a Vector3.
      */
@@ -145,10 +150,21 @@ public class Box3 {
 
     /**
      * @param point  - Vector3.
+     * @return Returns a point as a proportion of this box's width and height.
+     */
+    public native Vector3 getParameter(Vector3 point);
+
+    /**
+     * @param point  - Vector3.
      * @param target — the result will be copied into this Vector3.
      * @return Returns a point as a proportion of this box's width and height.
      */
     public native Vector3 getParameter(Vector3 point, Vector3 target);
+
+    /**
+     * @return Returns the width and height of this box.
+     */
+    public native Vector3 getSize();
 
     /**
      * @param target — the result will be copied into this Vector3.

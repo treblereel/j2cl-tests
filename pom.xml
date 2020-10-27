@@ -150,7 +150,7 @@
             <extern>src/main/externs/externs.js</extern>
           </externs>
 
-          <compilationLevel>BUNDLE_JAR</compilationLevel>
+          <compilationLevel>ADVANCED</compilationLevel>
 
 
 <!--

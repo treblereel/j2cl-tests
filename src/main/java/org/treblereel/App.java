@@ -1,17 +1,30 @@
 package org.treblereel;
 
+import elemental2.core.JsString;
 import elemental2.dom.DomGlobal;
+import jsinterop.base.Js;
 import org.treblereel.gwt.three4g.cameras.PerspectiveCamera;
+import org.treblereel.gwt.three4g.core.PropertyHolder;
 import org.treblereel.gwt.three4g.geometries.BoxBufferGeometry;
+import org.treblereel.gwt.three4g.helpers.CameraHelper;
+import org.treblereel.gwt.three4g.loaders.Cache;
+import org.treblereel.gwt.three4g.loaders.OnErrorCallback;
+import org.treblereel.gwt.three4g.loaders.OnLoadCallback;
+import org.treblereel.gwt.three4g.loaders.OnProgressCallback;
+import org.treblereel.gwt.three4g.loaders.OnProgressEvent;
 import org.treblereel.gwt.three4g.loaders.TextureLoader;
 import org.treblereel.gwt.three4g.materials.MeshBasicMaterial;
 import org.treblereel.gwt.three4g.materials.parameters.MeshBasicMaterialParameters;
+import org.treblereel.gwt.three4g.math.Quaternion;
 import org.treblereel.gwt.three4g.objects.Mesh;
 import org.treblereel.gwt.three4g.renderers.WebGLRenderer;
 import org.treblereel.gwt.three4g.renderers.parameters.WebGLRendererParameters;
+import org.treblereel.gwt.three4g.renderers.shaders.ShaderLib;
 import org.treblereel.gwt.three4g.scenes.Scene;
 import org.treblereel.gwt.three4g.textures.Texture;
+import org.treblereel.gwt.three4g.utils.JSON;
 
+import static elemental2.dom.DomGlobal.document;
 import static elemental2.dom.DomGlobal.window;
 
 public class App {
@@ -24,6 +37,18 @@ public class App {
 
     public void onModuleLoad() {
 
+        Quaternion q = new Quaternion();
+
+        DomGlobal.console.log("Quaternion " + q.isQuaternion + " " + q.clone().toArray().length);
+
+        //DomGlobal.console.log(" ShaderLib" + JSON.stringify(new ShaderLib()));
+
+        DomGlobal.console.log("? " + JSON.stringify(q));
+
+        new TextureLoader().setCrossOrigin("asdasd").setPath("aZZZZ");
+        new TextureLoader().setPath("asdsad");
+
+
         WebGLRendererParameters rendererParameters = new WebGLRendererParameters();
         rendererParameters.antialias = true;
         renderer = new WebGLRenderer(rendererParameters);
@@ -31,21 +56,32 @@ public class App {
         camera = new PerspectiveCamera(70, aspect, 1, 1000);
         camera.position.z = 400;
 
+        DomGlobal.console.log(new CameraHelper(camera).toJSON());
+
         scene = new Scene();
+
         String url = "https://threejs.org/examples/textures/crate.gif";
+
         TextureLoader textureLoader = new TextureLoader();
+
         Texture texture = textureLoader.load(url);
 
         BoxBufferGeometry geometry = new BoxBufferGeometry(200, 200, 200);
+
         MeshBasicMaterialParameters meshBasicMaterialParameters = new MeshBasicMaterialParameters();
+
         meshBasicMaterialParameters.map = texture;
+
         MeshBasicMaterial material = new MeshBasicMaterial(meshBasicMaterialParameters);
 
         mesh = new Mesh(geometry, material);
+
         scene.add(mesh);
 
         setupWebGLRenderer(renderer);
+
         DomGlobal.document.body.appendChild(renderer.domElement);
+
         animate();
     }
 
@@ -67,7 +103,14 @@ public class App {
         mesh.rotation.y += 0.01f;
 
         DomGlobal.requestAnimationFrame(timestamp -> {
+            DomGlobal.console.log("A4 " );
+            DomGlobal.console.log("A4 1 " + (renderer !=null));
+            DomGlobal.console.log("A4 2 " + (scene !=null));
+            DomGlobal.console.log("A4 3 " + (camera !=null));
+
             renderer.render(scene, camera);
+            DomGlobal.console.log("A5 " );
+
             animate();
         });
     }

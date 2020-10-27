@@ -108,6 +108,11 @@ public class Box2 {
     public native Box2 expandByVector(Vector2 vector);
 
     /**
+     * @return Returns the center point of the box as a Vector2.
+     */
+    public native Vector2 getCenter();
+
+    /**
      * @param target — the result will be copied into this Vector2.
      * @return Returns the center point of the box as a Vector2.
      */
@@ -115,10 +120,21 @@ public class Box2 {
 
     /**
      * @param point  - Vector2.
+     * @return Returns a point as a proportion of this box's width and height.
+     */
+    public native Vector2 getParameter(Vector2 point);
+
+    /**
+     * @param point  - Vector2.
      * @param target — the result will be copied into this Vector2.
      * @return Returns a point as a proportion of this box's width and height.
      */
     public native Vector2 getParameter(Vector2 point, Vector2 target);
+
+    /**
+     * @return Returns the width and height of this box.
+     */
+    public native Vector2 getSize();
 
     /**
      * @param target — the result will be copied into this Vector2.

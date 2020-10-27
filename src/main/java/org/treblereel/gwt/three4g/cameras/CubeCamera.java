@@ -3,12 +3,12 @@ package org.treblereel.gwt.three4g.cameras;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.cameras.params.CubeCameraOptions;
 import org.treblereel.gwt.three4g.core.Object3D;
-import org.treblereel.gwt.three4g.renderers.WebGLRenderTargetCube;
+import org.treblereel.gwt.three4g.renderers.WebGLCubeRenderTarget;
 import org.treblereel.gwt.three4g.renderers.WebGLRenderer;
 import org.treblereel.gwt.three4g.scenes.Scene;
 
 /**
- * Creates 6 cameras that render to a WebGLRenderTargetCube.
+ * Creates 6 cameras that render to a WebGLCubeRenderTarget.
  *
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 5/3/18.
@@ -19,10 +19,10 @@ public class CubeCamera extends Object3D {
     /**
      * The cube texture that gets generated.
      */
-    public WebGLRenderTargetCube renderTarget;
+    public WebGLCubeRenderTarget renderTarget;
 
     /**
-     * Constructs a CubeCamera that contains 6 PerspectiveCameras that render to a WebGLRenderTargetCube.
+     * Constructs a CubeCamera that contains 6 PerspectiveCameras that render to a WebGLCubeRenderTarget.
      *
      * @param near           -- The near clipping distance.
      * @param far            -- The far clipping distance
@@ -33,7 +33,7 @@ public class CubeCamera extends Object3D {
     }
 
     /**
-     * Constructs a CubeCamera that contains 6 PerspectiveCameras that render to a WebGLRenderTargetCube.
+     * Constructs a CubeCamera that contains 6 PerspectiveCameras that render to a WebGLCubeRenderTarget.
      *
      * @param near           -- The near clipping distance.
      * @param far            -- The far clipping distance

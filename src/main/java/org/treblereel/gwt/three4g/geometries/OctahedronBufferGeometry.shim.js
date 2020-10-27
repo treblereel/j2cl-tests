@@ -1,3 +1,3 @@
-import {OctahedronBufferGeometry} from './OctahedronGeometry.js';
+import {OctahedronBufferGeometry} from './OctahedronBufferGeometry.js';
 goog.declareModuleId('org.treblereel.gwt.three4g.geometries.OctahedronBufferGeometry.shim');
 export {OctahedronBufferGeometry};

@@ -406,14 +406,14 @@ public class WebGLRenderer {
     /**
      * This method sets the active rendertarget. If the parameter is omitted the canvas is set as the active rendertarget.
      * @param renderTarget -- The renderTarget that needs to be activated (optional).
-     * @param activeCubeFace -- Specifies the active cube side (PX 0, NX 1, PY 2, NY 3, PZ 4, NZ 5) of [page:WebGLRenderTargetCube] (optional).
+     * @param activeCubeFace -- Specifies the active cube side (PX 0, NX 1, PY 2, NY 3, PZ 4, NZ 5) of [page:WebGLCubeRenderTarget] (optional).
      */
     public native void setRenderTarget(WebGLRenderTarget renderTarget, int activeCubeFace);
 
     /**
      * This method sets the active rendertarget. If the parameter is omitted the canvas is set as the active rendertarget.
      * @param renderTarget -- The renderTarget that needs to be activated (optional).
-     * @param activeCubeFace -- Specifies the active cube side (PX 0, NX 1, PY 2, NY 3, PZ 4, NZ 5) of [page:WebGLRenderTargetCube] (optional).
+     * @param activeCubeFace -- Specifies the active cube side (PX 0, NX 1, PY 2, NY 3, PZ 4, NZ 5) of [page:WebGLCubeRenderTarget] (optional).
      * @param activeMipmapLevel -- Specifies the active mipmap level (optional).
      */
     public native void setRenderTarget(WebGLRenderTarget renderTarget, int activeCubeFace, int activeMipmapLevel);
