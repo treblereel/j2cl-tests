@@ -1,5 +1,9 @@
 import { Group } from '../../objects/Group.js';
 
+
+/**
+* @constructor
+*/
 function WebXRController() {
 
 	this._targetRay = null;

@@ -52,7 +52,6 @@ class Scene extends Object3D {
 		if ( this.fog !== null ) data.object.fog = this.fog.toJSON();
 
 		return data;
-
 	}
 
 }

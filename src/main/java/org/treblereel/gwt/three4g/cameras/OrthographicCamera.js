@@ -1,6 +1,16 @@
 import { Camera } from './Camera.js';
 import { Object3D } from '../core/Object3D.js';
 
+/**
+* @param {number=} left
+* @param {number=} right
+* @param {number=} top
+* @param {number=} bottom
+* @param {number=} near
+* @param {number=} far
+* @extends {Camera}
+* @constructor
+*/
 function OrthographicCamera( left, right, top, bottom, near, far ) {
 
 	Camera.call( this );

@@ -20,7 +20,7 @@ import org.treblereel.gwt.three4g.math.Vector4;
 import org.treblereel.gwt.three4g.renderers.parameters.WebGLRendererParameters;
 import org.treblereel.gwt.three4g.renderers.webgl.WebGLProgram;
 import org.treblereel.gwt.three4g.renderers.webgl.WebGlShadowMap;
-import org.treblereel.gwt.three4g.renderers.webvr.WebVRManager;
+import org.treblereel.gwt.three4g.renderers.webxr.WebXRManager;
 import org.treblereel.gwt.three4g.scenes.Fog;
 import org.treblereel.gwt.three4g.scenes.Scene;
 import org.treblereel.gwt.three4g.textures.CubeTexture;
@@ -175,7 +175,7 @@ public class WebGLRenderer {
     /**
      * Instance of WebVRManager if presented
      */
-    public WebVRManager vr;
+    public WebXRManager xr;
 
     public WebGLRenderer() {
 

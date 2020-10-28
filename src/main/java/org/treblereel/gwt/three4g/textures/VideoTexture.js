@@ -1,6 +1,19 @@
 import { RGBFormat, LinearFilter } from '../constants.js';
 import { Texture } from './Texture.js';
 
+/**
+* @constructor
+* @param {HTMLVideoElement=} video;
+* @param {number=} mapping;
+* @param {number=} wrapS;
+* @param {number=} wrapT;
+* @param {number=} magFilter;
+* @param {number=} minFilter;
+* @param {number=} format;
+* @param {number=} type;
+* @param {number=} anisotropy;
+* @extends {Texture}
+*/
 function VideoTexture( video, mapping, wrapS, wrapT, magFilter, minFilter, format, type, anisotropy ) {
 
 	Texture.call( this, video, mapping, wrapS, wrapT, magFilter, minFilter, format, type, anisotropy );

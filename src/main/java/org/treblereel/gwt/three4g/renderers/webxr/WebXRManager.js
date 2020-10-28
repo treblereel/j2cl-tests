@@ -6,6 +6,12 @@ import { Vector4 } from '../../math/Vector4.js';
 import { WebGLAnimation } from '../webgl/WebGLAnimation.js';
 import { WebXRController } from './WebXRController.js';
 
+/**
+* @constructor
+* @param {Object} renderer
+* @param {WebGLRenderingContext} gl
+* @extends {EventDispatcher}
+*/
 function WebXRManager( renderer, gl ) {
 
 	const scope = this;

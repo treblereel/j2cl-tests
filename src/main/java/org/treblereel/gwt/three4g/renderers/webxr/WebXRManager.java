@@ -1,5 +1,6 @@
-package org.treblereel.gwt.three4g.renderers.webvr;
+package org.treblereel.gwt.three4g.renderers.webxr;
 
+import elemental2.webgl.WebGLRenderingContext;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.cameras.ArrayCamera;
 import org.treblereel.gwt.three4g.math.Matrix4;
@@ -10,7 +11,7 @@ import org.treblereel.gwt.three4g.renderers.WebGLRenderer;
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 7/9/18.
  */
-@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.renderers.webvr")
+@JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.renderers.webxr")
 public class WebXRManager {
 
     public boolean enabled;
@@ -21,7 +22,7 @@ public class WebXRManager {
 
     public String referenceSpaceType;
 
-    public WebXRManager(WebGLRenderer renderer){
+    public WebXRManager(WebGLRenderer renderer, WebGLRenderingContext context){
 
     }
 

@@ -25,9 +25,6 @@ const _zAxis = new Vector3( 0, 0, 1 );
 const _addedEvent = { type: 'added' };
 const _removedEvent = { type: 'removed' };
 
-/**
- * @constructor
- */
 function Object3D() {
 
 	Object.defineProperty( this, 'id', { value: _object3DId ++ } );

@@ -1,5 +1,9 @@
 import { Object3D } from '../core/Object3D.js';
 
+/**
+* @constructor
+* @extends {Object3D}
+*/
 function Group() {
 
 	Object3D.call( this );

@@ -1,6 +1,15 @@
 import { Texture } from './Texture.js';
 import { ClampToEdgeWrapping, NearestFilter } from '../constants.js';
 
+/**
+* @constructor
+* @param {TypedArray=} data;
+* @param {number=} width;
+* @param {number=} height;
+* @param {number=} depth;
+* @extends {Texture}
+* @this {Texture}
+*/
 function DataTexture2DArray( data, width, height, depth ) {
 
 	Texture.call( this, null );

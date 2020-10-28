@@ -1,3 +1,6 @@
+/**
+* @constructor
+*/
 function WebGLAnimation() {
 
 	let context = null;

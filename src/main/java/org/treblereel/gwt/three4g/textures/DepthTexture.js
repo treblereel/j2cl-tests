@@ -1,6 +1,22 @@
 import { Texture } from './Texture.js';
 import { NearestFilter, UnsignedShortType, UnsignedInt248Type, DepthFormat, DepthStencilFormat } from '../constants.js';
 
+
+/**
+* @constructor
+* @param {number=} width;
+* @param {number=} height;
+* @param {number=} type;
+* @param {number=} mapping;
+* @param {number=} wrapS;
+* @param {number=} wrapT;
+* @param {number=} magFilter;
+* @param {number=} minFilter;
+* @param {number=} anisotropy;
+* @param {number=} format;
+* @extends {Texture}
+
+*/
 function DepthTexture( width, height, type, mapping, wrapS, wrapT, magFilter, minFilter, anisotropy, format ) {
 
 	format = format !== undefined ? format : DepthFormat;

@@ -16,6 +16,11 @@ Window.prototype.navigator;
 Window.XR = function(){}
 
 /**
+* @constructor
+*/
+Window.XRHand = function(){}
+
+/**
  * @const {Window.XR}
  */
 Navigator.prototype.xr;

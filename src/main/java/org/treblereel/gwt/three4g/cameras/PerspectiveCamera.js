@@ -8,7 +8,7 @@ import { MathUtils } from '../math/MathUtils.js';
 * @param {number=} aspect
 * @param {number=} near
 * @param {number=} far
-* @extends Camera
+* @extends {Camera}
 * @constructor
 */
 function PerspectiveCamera( fov, aspect, near, far ) {
@@ -219,7 +219,6 @@ PerspectiveCamera.prototype = Object.assign( Object.create( Camera.prototype ), 
 	},
 
 	toJSON: function ( meta ) {
-
 		const data = Object3D.prototype.toJSON.call( this, meta );
 
 		data.object.fov = this.fov;

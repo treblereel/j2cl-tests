@@ -1,3 +1,5 @@
+import { BufferAttribute } from './../core/BufferAttribute.js';
+
 class Vector2 {
 
 	constructor( x = 0, y = 0 ) {
@@ -111,6 +113,7 @@ class Vector2 {
     /**
     * @param {Vector2} v
     * @param {Vector2=} w
+    * @return {Vector2}
     */
 	add( v, w ) {
 
@@ -427,6 +430,7 @@ class Vector2 {
     /**
     * @param {Array} array
     * @param {number=} offset
+    * @return {Vector2}
     */
 	fromArray( array, offset ) {
 
@@ -442,6 +446,7 @@ class Vector2 {
     /**
     * @param {Array=} array
     * @param {number=} offset
+    * @return {Array}
     */
 	toArray( array, offset ) {
 
@@ -459,6 +464,7 @@ class Vector2 {
     * @param {BufferAttribute} attribute
     * @param {number} index
     * @param {number=} offset
+    * @return {Vector2}
     */
 	fromBufferAttribute( attribute, index, offset ) {
 

@@ -476,6 +476,16 @@ function WebGLState( gl, extensions, capabilities ) {
 		[ OneMinusDstAlphaFactor ]: gl.ONE_MINUS_DST_ALPHA
 	};
 
+    /**
+    * @param {number} blending
+    * @param {number=} blendEquation
+    * @param {number=} blendSrc
+    * @param {number=} blendDst
+    * @param {number=} blendEquationAlpha
+    * @param {number=} blendSrcAlpha
+    * @param {number=} blendDstAlpha
+    * @param {boolean=} premultipliedAlpha
+    */
 	function setBlending( blending, blendEquation, blendSrc, blendDst, blendEquationAlpha, blendSrcAlpha, blendDstAlpha, premultipliedAlpha ) {
 
 		if ( blending === NoBlending ) {
@@ -750,7 +760,9 @@ function WebGLState( gl, extensions, capabilities ) {
 	}
 
 	// texture
-
+    /**
+    * @param {number=} webglSlot
+    */
 	function activeTexture( webglSlot ) {
 
 		if ( webglSlot === undefined ) webglSlot = gl.TEXTURE0 + maxTextures - 1;

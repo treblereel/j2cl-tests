@@ -17,6 +17,19 @@ import { ImageUtils } from '../extras/ImageUtils.js';
 
 let textureId = 0;
 
+/**
+* @constructor
+* @param {HTMLImageElement | HTMLCanvasElement | HTMLVideoElement=} image
+* @param {number=} mapping
+* @param {number=} wrapS
+* @param {number=} wrapT
+* @param {number=} magFilter
+* @param {number=} minFilter
+* @param {number=} format
+* @param {number=} type
+* @param {number=} anisotropy
+* @param {number=} encoding
+*/
 function Texture( image, mapping, wrapS, wrapT, magFilter, minFilter, format, type, anisotropy, encoding ) {
 
 	Object.defineProperty( this, 'id', { value: textureId ++ } );
@@ -318,6 +331,9 @@ Texture.prototype = Object.assign( Object.create( EventDispatcher.prototype ), {
 
 Object.defineProperty( Texture.prototype, "needsUpdate", {
 
+    /**
+    * @this {Texture}
+    */
 	set: function ( value ) {
 
 		if ( value === true ) this.version ++;

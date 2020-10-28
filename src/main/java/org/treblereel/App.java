@@ -37,7 +37,7 @@ public class App {
 
     public void onModuleLoad() {
 
-        Quaternion q = new Quaternion();
+/*        Quaternion q = new Quaternion();
 
         DomGlobal.console.log("Quaternion " + q.isQuaternion + " " + q.clone().toArray().length);
 
@@ -46,7 +46,7 @@ public class App {
         DomGlobal.console.log("? " + JSON.stringify(q));
 
         new TextureLoader().setCrossOrigin("asdasd").setPath("aZZZZ");
-        new TextureLoader().setPath("asdsad");
+        new TextureLoader().setPath("asdsad");*/
 
 
         WebGLRendererParameters rendererParameters = new WebGLRendererParameters();
