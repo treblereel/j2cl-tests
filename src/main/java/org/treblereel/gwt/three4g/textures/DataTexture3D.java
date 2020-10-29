@@ -5,7 +5,6 @@ import jsinterop.annotations.JsType;
 
 /**
  * initial implementation
- *
  * @author Dmitrii Tikhomirov
  * Created by treblereel on 10/9/18.
  */
@@ -19,8 +18,11 @@ public class DataTexture3D extends Texture {
      */
     public boolean isDataTexture3D;
 
-    public DataTexture3D(TypedArray data, float width, float height, float depth) {
+    public DataTexture3D() {
 
     }
 
+    public DataTexture3D(TypedArray data, float width, float height, float depth) {
+
+    }
 }

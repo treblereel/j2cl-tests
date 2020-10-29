@@ -7,6 +7,13 @@ import { WebGLRenderTarget } from './WebGLRenderTarget.js';
 import { CubeCamera } from '../cameras/CubeCamera.js';
 import { CubeTexture } from '../textures/CubeTexture.js';
 
+/**
+* @constructor
+* @param {number} size
+* @param {Object=} options
+* @param {Object=} dummy
+* @extends {WebGLRenderTarget}
+*/
 function WebGLCubeRenderTarget( size, options, dummy ) {
 
 	if ( Number.isInteger( options ) ) {

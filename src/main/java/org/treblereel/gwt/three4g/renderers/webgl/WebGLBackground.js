@@ -7,6 +7,19 @@ import { Mesh } from '../../objects/Mesh.js';
 import { ShaderLib } from '../shaders/ShaderLib.js';
 import { cloneUniforms } from '../shaders/UniformsUtils.js';
 
+import { WebGLRenderer } from '../WebGLRenderer.js';
+import { WebGLState } from './WebGLState.js';
+import { WebGLObjects } from './WebGLObjects.js';
+import { WebGLCubeMaps } from './WebGLCubeMaps.js';
+
+/**
+* @constructor
+* @param {WebGLRenderer} renderer
+* @param {WebGLCubeMaps} cubemaps
+* @param {WebGLState} state
+* @param {WebGLObjects} objects
+* @param {boolean} premultipliedAlpha
+*/
 function WebGLBackground( renderer, cubemaps, state, objects, premultipliedAlpha ) {
 
 	const clearColor = new Color( 0x000000 );

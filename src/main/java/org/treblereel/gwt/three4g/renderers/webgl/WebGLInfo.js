@@ -1,3 +1,8 @@
+
+/**
+* @constructor
+* @param {WebGLRenderingContext} gl
+*/
 function WebGLInfo( gl ) {
 
 	const memory = {

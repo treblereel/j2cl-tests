@@ -1,3 +1,10 @@
+import { WebGLCapabilities } from './WebGLCapabilities.js';
+
+/**
+* @constructor
+* @param {WebGLRenderingContext | WebGL2RenderingContext} gl
+* @param {WebGLCapabilities} capabilities
+*/
 function WebGLAttributes( gl, capabilities ) {
 
 	const isWebGL2 = capabilities.isWebGL2;

@@ -1,9 +1,18 @@
 import { Object3D } from '../core/Object3D.js';
 import { Vector3 } from '../math/Vector3.js';
 import { PerspectiveCamera } from './PerspectiveCamera.js';
+import { WebGLCubeRenderTarget } from './../renderers/WebGLCubeRenderTarget.js';
+
 
 const fov = 90, aspect = 1;
 
+/**
+* @constructor
+* @param {number} near
+* @param {number} far
+* @param {WebGLCubeRenderTarget=} renderTarget
+* @extends {Object3D}
+*/
 function CubeCamera( near, far, renderTarget ) {
 
 	Object3D.call( this );

@@ -1,3 +1,5 @@
+import { WebGLProperties } from './WebGLProperties.js';
+
 function painterSortStable( a, b ) {
 
 	if ( a.groupOrder !== b.groupOrder ) {
@@ -50,7 +52,10 @@ function reversePainterSortStable( a, b ) {
 
 }
 
-
+/**
+* @constructor
+* @param {WebGLProperties} properties
+*/
 function WebGLRenderList( properties ) {
 
 	const renderItems = [];

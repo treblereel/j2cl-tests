@@ -1,4 +1,15 @@
-﻿function WebGLBindingStates( gl, extensions, attributes, capabilities ) {
+﻿import { WebGLExtensions } from './WebGLExtensions.js';
+import { WebGLAttributes } from './WebGLAttributes.js';
+import { WebGLCapabilities } from './WebGLCapabilities.js';
+
+/**
+* @constructor
+* @param {WebGLRenderingContext} gl
+* @param {WebGLExtensions} extensions
+* @param {WebGLAttributes} attributes
+* @param {WebGLCapabilities} capabilities
+*/
+function WebGLBindingStates( gl, extensions, attributes, capabilities ) {
 
 	const maxVertexAttributes = gl.getParameter( gl.MAX_VERTEX_ATTRIBS );
 

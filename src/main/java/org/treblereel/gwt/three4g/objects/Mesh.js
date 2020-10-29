@@ -10,6 +10,9 @@ import { DoubleSide, BackSide } from '../constants.js';
 import { MeshBasicMaterial } from '../materials/MeshBasicMaterial.js';
 import { BufferGeometry } from '../core/BufferGeometry.js';
 
+import { Geometry } from './../core/Geometry.js';
+import { Material } from './../materials/Material.js';
+
 const _inverseMatrix = new Matrix4();
 const _ray = new Ray();
 const _sphere = new Sphere();
@@ -33,6 +36,12 @@ const _uvC = new Vector2();
 const _intersectionPoint = new Vector3();
 const _intersectionPointWorld = new Vector3();
 
+/**
+* @constructor
+* @param {Geometry=} geometry
+* @param {Material=} material
+* @extends {Object3D}
+*/
 function Mesh( geometry, material ) {
 
 	Object3D.call( this );

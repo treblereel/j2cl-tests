@@ -1,3 +1,7 @@
+/**
+* @constructor
+* @param {WebGLRenderingContext} gl
+*/
 function WebGLExtensions( gl ) {
 
 	const extensions = {};

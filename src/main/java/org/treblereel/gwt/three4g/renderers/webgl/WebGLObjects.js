@@ -1,3 +1,15 @@
+import { WebGLGeometries } from './WebGLGeometries.js';
+import { WebGLAttributes } from './WebGLAttributes.js';
+import { WebGLInfo } from './WebGLInfo.js';
+
+
+/**
+* @constructor
+* @param {WebGLRenderingContext} gl
+* @param {WebGLGeometries} geometries
+* @param {WebGLAttributes} attributes
+* @param {WebGLInfo} info
+*/
 function WebGLObjects( gl, geometries, attributes, info ) {
 
 	let updateMap = new WeakMap();

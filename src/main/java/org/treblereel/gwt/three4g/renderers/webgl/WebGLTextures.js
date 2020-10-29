@@ -1,6 +1,23 @@
 import { LinearFilter, LinearMipmapLinearFilter, LinearMipmapNearestFilter, NearestFilter, NearestMipmapLinearFilter, NearestMipmapNearestFilter, RGBFormat, RGBAFormat, DepthFormat, DepthStencilFormat, UnsignedShortType, UnsignedIntType, UnsignedInt248Type, FloatType, HalfFloatType, MirroredRepeatWrapping, ClampToEdgeWrapping, RepeatWrapping } from '../../constants.js';
 import { MathUtils } from '../../math/MathUtils.js';
 
+import { WebGLState } from './WebGLState.js';
+import { WebGLProperties } from './WebGLProperties.js';
+import { WebGLCapabilities } from './WebGLCapabilities.js';
+import { WebGLUtils } from './WebGLUtils.js';
+import { WebGLInfo } from './WebGLInfo.js';
+import { WebGLMultisampleRenderTarget } from './../WebGLMultisampleRenderTarget.js';
+
+/**
+* @constructor
+* @param {WebGLRenderingContext} _gl
+* @param {WebGLExtensions} extensions
+* @param {WebGLState} state
+* @param {WebGLProperties} properties
+* @param {WebGLCapabilities} capabilities
+* @param {WebGLUtils} utils
+* @param {WebGLInfo} info
+*/
 function WebGLTextures( _gl, extensions, state, properties, capabilities, utils, info ) {
 
 	const isWebGL2 = capabilities.isWebGL2;
@@ -1134,6 +1151,10 @@ function WebGLTextures( _gl, extensions, state, properties, capabilities, utils,
 
 	}
 
+    /**
+    * @param {Object} renderTarget
+    * @this {WebGLTextures}
+    */
 	function updateRenderTargetMipmap( renderTarget ) {
 
 		const texture = renderTarget.texture;
@@ -1152,6 +1173,10 @@ function WebGLTextures( _gl, extensions, state, properties, capabilities, utils,
 
 	}
 
+    /**
+    * @param {WebGLMultisampleRenderTarget} renderTarget
+    * @this {WebGLTextures}
+    */
 	function updateMultisampleRenderTarget( renderTarget ) {
 
 		if ( renderTarget.isWebGLMultisampleRenderTarget ) {

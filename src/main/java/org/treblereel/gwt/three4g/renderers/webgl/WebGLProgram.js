@@ -3,6 +3,9 @@ import { WebGLShader } from './WebGLShader.js';
 import { ShaderChunk } from '../shaders/ShaderChunk.js';
 import { NoToneMapping, AddOperation, MixOperation, MultiplyOperation, CubeRefractionMapping, CubeUVRefractionMapping, CubeUVReflectionMapping, CubeReflectionMapping, PCFSoftShadowMap, PCFShadowMap, VSMShadowMap, ACESFilmicToneMapping, CineonToneMapping, CustomToneMapping, ReinhardToneMapping, LinearToneMapping, GammaEncoding, RGBDEncoding, RGBM16Encoding, RGBM7Encoding, RGBEEncoding, sRGBEncoding, LinearEncoding, LogLuvEncoding, GLSL3 } from '../../constants.js';
 
+import { WebGLRenderer } from './../WebGLRenderer.js';
+import { WebGLBindingStates } from './WebGLBindingStates.js';
+
 let programIdCount = 0;
 
 function addLineNumbers( string ) {
@@ -375,6 +378,13 @@ function generateEnvMapBlendingDefine( parameters ) {
 
 }
 
+/**
+* @constructor
+* @param {WebGLRenderer} renderer
+* @param {string} cacheKey
+* @param {Object} parameters
+* @param {WebGLBindingStates=} bindingStates
+*/
 function WebGLProgram( renderer, cacheKey, parameters, bindingStates ) {
 
 	const gl = renderer.getContext();

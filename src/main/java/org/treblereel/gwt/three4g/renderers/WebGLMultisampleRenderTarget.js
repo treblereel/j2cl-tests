@@ -1,5 +1,12 @@
 import { WebGLRenderTarget } from './WebGLRenderTarget.js';
 
+/**
+* @constructor
+* @param {number} width
+* @param {number} height
+* @param {Object=} options
+* @extends {WebGLRenderTarget}
+*/
 function WebGLMultisampleRenderTarget( width, height, options ) {
 
 	WebGLRenderTarget.call( this, width, height, options );
@@ -14,6 +21,10 @@ WebGLMultisampleRenderTarget.prototype = Object.assign( Object.create( WebGLRend
 
 	isWebGLMultisampleRenderTarget: true,
 
+    /**
+    * @param {WebGLRenderTarget} source
+    * @return {WebGLMultisampleRenderTarget}
+    */
 	copy: function ( source ) {
 
 		WebGLRenderTarget.prototype.copy.call( this, source );

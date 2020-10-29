@@ -1,5 +1,10 @@
 import { WebGLRenderer } from './WebGLRenderer.js';
 
+/**
+* @constructor
+* @param {Object=} parameters
+* @extends {WebGLRenderer}
+*/
 function WebGL1Renderer( parameters ) {
 
 	WebGLRenderer.call( this, parameters );

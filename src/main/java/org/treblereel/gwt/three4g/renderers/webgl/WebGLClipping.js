@@ -1,6 +1,11 @@
 import { Matrix3 } from '../../math/Matrix3.js';
 import { Plane } from '../../math/Plane.js';
+import { WebGLProperties } from './WebGLProperties.js';
 
+/**
+* @constructor
+* @param {WebGLProperties} properties
+*/
 function WebGLClipping( properties ) {
 
 	const scope = this;

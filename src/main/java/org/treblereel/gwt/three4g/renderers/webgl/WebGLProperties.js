@@ -1,7 +1,16 @@
+
+/**
+* @constructor
+*/
 function WebGLProperties() {
 
 	let properties = new WeakMap();
 
+    /**
+    * @param {Object} object
+    * @return {Object}
+    * @this {WebGLProperties}
+    */
 	function get( object ) {
 
 		let map = properties.get( object );

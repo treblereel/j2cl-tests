@@ -46,6 +46,9 @@ import { Texture } from '../../textures/Texture.js';
 import { DataTexture2DArray } from '../../textures/DataTexture2DArray.js';
 import { DataTexture3D } from '../../textures/DataTexture3D.js';
 
+import { WebGLProgram } from './WebGLProgram.js';
+import { WebGLTextures } from './WebGLTextures.js';
+
 const emptyTexture = new Texture();
 const emptyTexture2dArray = new DataTexture2DArray();
 const emptyTexture3d = new DataTexture3D();
@@ -685,7 +688,12 @@ function getPureArraySetter( type ) {
 }
 
 // --- Uniform Classes ---
-
+/**
+* @param {number|string} id
+* @param {Object} activeInfo
+* @param {string} addr
+* @constructor
+*/
 function SingleUniform( id, activeInfo, addr ) {
 
 	this.id = id;
@@ -697,6 +705,12 @@ function SingleUniform( id, activeInfo, addr ) {
 
 }
 
+/**
+* @param {number|string} id
+* @param {Object} activeInfo
+* @param {string} addr
+* @constructor
+*/
 function PureArrayUniform( id, activeInfo, addr ) {
 
 	this.id = id;
@@ -723,6 +737,10 @@ PureArrayUniform.prototype.updateCache = function ( data ) {
 
 };
 
+/**
+* @param {number|string} id
+* @constructor
+*/
 function StructuredUniform( id ) {
 
 	this.id = id;
@@ -819,7 +837,11 @@ function parseUniform( activeInfo, addr, container ) {
 }
 
 // Root Container
-
+/**
+* @param {WebGLRenderingContext} gl
+* @param {WebGLProgram} program
+* @constructor
+*/
 function WebGLUniforms( gl, program ) {
 
 	this.seq = [];
@@ -838,6 +860,12 @@ function WebGLUniforms( gl, program ) {
 
 }
 
+/**
+* @param {WebGLRenderingContext} gl
+* @param {string} name
+* @param {Object} value
+* @param {WebGLTextures=} textures
+*/
 WebGLUniforms.prototype.setValue = function ( gl, name, value, textures ) {
 
 	const u = this.map[ name ];

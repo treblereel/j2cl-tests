@@ -1,3 +1,11 @@
+import { WebGLExtensions } from './WebGLExtensions.js';
+
+/**
+* @constructor
+* @param {WebGLRenderingContext} gl
+* @param {WebGLExtensions} extensions
+* @param {WebGLCapabilitiesParameters} parameters
+*/
 function WebGLCapabilities( gl, extensions, parameters ) {
 
 	let maxAnisotropy;

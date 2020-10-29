@@ -8,6 +8,14 @@ import { Vector4 } from '../math/Vector4.js';
  * Texture parameters for an auto-generated target texture
  * depthBuffer/stencilBuffer: Booleans to indicate if we should generate these buffers
 */
+
+/**
+* @constructor
+* @param {WebGLProperties} width
+* @param {WebGLProperties} height
+* @param {Object=} options
+* @extends {EventDispatcher}
+*/
 function WebGLRenderTarget( width, height, options ) {
 
 	this.width = width;

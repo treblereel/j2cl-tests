@@ -1,6 +1,5 @@
 package org.treblereel.gwt.three4g.textures;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsType;
 
 /**
@@ -16,7 +15,10 @@ import jsinterop.annotations.JsType;
 @JsType(isNative = true, namespace = "org.treblereel.gwt.three4g.textures")
 public class CubeTexture extends Texture {
 
-    @JsConstructor
+    public CubeTexture(){
+
+    }
+
     public CubeTexture(Object[] images, int mapping, int wrapS, int wrapT, int magFilter, int minFilter, int format, int type, int anisotropy ){
 
     }

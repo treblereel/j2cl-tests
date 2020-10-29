@@ -3,7 +3,6 @@ package org.treblereel.gwt.three4g.textures;
 import elemental2.core.ArrayBuffer;
 import elemental2.core.TypedArray;
 import elemental2.dom.Image;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsType;
 
 /**
@@ -26,62 +25,54 @@ public class DataTexture extends Texture {
      */
     public Image image;
 
-    @JsConstructor
+    public DataTexture() {
+
+    }
+
     public DataTexture(ArrayBuffer data, int width, int height, int format) {
 
     }
 
-    @JsConstructor
     public DataTexture(ArrayBuffer data, int width, int height, int format, int type) {
 
     }
 
-    @JsConstructor
     public DataTexture(ArrayBuffer data, int width, int height, int format, int type, int mapping) {
 
     }
 
-    @JsConstructor
     public DataTexture(ArrayBuffer data, int width, int height, int format, int type, int mapping, int wrapS, int wrapT) {
 
     }
 
-    @JsConstructor
     public DataTexture(ArrayBuffer data, int width, int height, int format, int type, int mapping, int wrapS, int wrapT, int magFilter, int minFilter) {
 
     }
 
-    @JsConstructor
     public DataTexture(ArrayBuffer data, int width, int height, int format, int type, int mapping, int wrapS, int wrapT, int magFilter, int minFilter, int anisotropy) {
 
     }
 
-    @JsConstructor
     public DataTexture(TypedArray data, int width, int height, int format) {
 
     }
 
-    @JsConstructor
     public DataTexture(TypedArray data, int width, int height, int format, int type) {
 
     }
 
-    @JsConstructor
     public DataTexture(TypedArray data, int width, int height, int format, int type, int mapping) {
 
     }
 
-    @JsConstructor
     public DataTexture(TypedArray data, int width, int height, int format, int type, int mapping, int wrapS, int wrapT) {
 
     }
 
-    @JsConstructor
     public DataTexture(TypedArray data, int width, int height, int format, int type, int mapping, int wrapS, int wrapT, int magFilter, int minFilter) {
 
     }
 
-    @JsConstructor
     public DataTexture(TypedArray data, int width, int height, int format, int type, int mapping, int wrapS, int wrapT, int magFilter, int minFilter, int anisotropy) {
 
     }

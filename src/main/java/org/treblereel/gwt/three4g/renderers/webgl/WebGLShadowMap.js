@@ -13,6 +13,14 @@ import { Frustum } from '../../math/Frustum.js';
 import vsm_frag from '../shaders/ShaderLib/vsm_frag.glsl.js';
 import vsm_vert from '../shaders/ShaderLib/vsm_vert.glsl.js';
 
+import { WebGLRenderer } from './../WebGLRenderer.js';
+
+/**
+* @constructor
+* @param {WebGLRenderer} _renderer
+* @param {WebGLObjects} _objects
+* @param {number} maxTextureSize
+*/
 function WebGLShadowMap( _renderer, _objects, maxTextureSize ) {
 
 	let _frustum = new Frustum();

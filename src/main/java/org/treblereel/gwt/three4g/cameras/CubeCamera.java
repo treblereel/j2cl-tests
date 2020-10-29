@@ -26,9 +26,8 @@ public class CubeCamera extends Object3D {
      *
      * @param near           -- The near clipping distance.
      * @param far            -- The far clipping distance
-     * @param cubeResolution -- Sets the length of the cube's edges.
      */
-    public CubeCamera(float near, float far, float cubeResolution) {
+    public CubeCamera(float near, float far) {
 
     }
 
@@ -37,10 +36,9 @@ public class CubeCamera extends Object3D {
      *
      * @param near           -- The near clipping distance.
      * @param far            -- The far clipping distance
-     * @param cubeResolution -- Sets the length of the cube's edges.
      * @param options        -- CubeCameraOptions
      */
-    public CubeCamera(float near, float far, float cubeResolution, CubeCameraOptions options) {
+    public CubeCamera(float near, float far, CubeCameraOptions options) {
 
     }
 

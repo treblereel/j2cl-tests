@@ -103,14 +103,7 @@ public class App {
         mesh.rotation.y += 0.01f;
 
         DomGlobal.requestAnimationFrame(timestamp -> {
-            DomGlobal.console.log("A4 " );
-            DomGlobal.console.log("A4 1 " + (renderer !=null));
-            DomGlobal.console.log("A4 2 " + (scene !=null));
-            DomGlobal.console.log("A4 3 " + (camera !=null));
-
             renderer.render(scene, camera);
-            DomGlobal.console.log("A5 " );
-
             animate();
         });
     }

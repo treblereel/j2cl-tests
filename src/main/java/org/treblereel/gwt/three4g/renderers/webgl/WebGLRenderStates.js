@@ -1,5 +1,8 @@
 import { WebGLLights } from './WebGLLights.js';
 
+/**
+* @constructor
+*/
 function WebGLRenderState() {
 
 	const lights = new WebGLLights();

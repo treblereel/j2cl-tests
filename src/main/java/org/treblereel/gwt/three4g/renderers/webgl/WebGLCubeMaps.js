@@ -1,6 +1,11 @@
 import { CubeReflectionMapping, CubeRefractionMapping, EquirectangularReflectionMapping, EquirectangularRefractionMapping } from '../../constants.js';
 import { WebGLCubeRenderTarget } from '../WebGLCubeRenderTarget.js';
+import { WebGLRenderer } from '../WebGLRenderer.js';
 
+/**
+* @constructor
+* @param {WebGLRenderer} renderer
+*/
 function WebGLCubeMaps( renderer ) {
 
 	let cubemaps = new WeakMap();

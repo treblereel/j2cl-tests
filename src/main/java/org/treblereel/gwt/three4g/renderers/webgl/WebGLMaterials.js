@@ -1,5 +1,9 @@
 import { BackSide } from '../../constants.js';
 
+/**
+* @constructor
+* @param {WebGLProperties} properties
+*/
 function WebGLMaterials( properties ) {
 
 	function refreshFogUniforms( uniforms, fog ) {

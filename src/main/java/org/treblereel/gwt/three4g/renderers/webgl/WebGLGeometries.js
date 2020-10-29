@@ -2,6 +2,18 @@ import { Uint16BufferAttribute, Uint32BufferAttribute } from '../../core/BufferA
 import { BufferGeometry } from '../../core/BufferGeometry.js';
 import { arrayMax } from '../../utils.js';
 
+import { WebGLAttributes } from './WebGLAttributes.js';
+import { WebGLInfo } from './WebGLInfo.js';
+import { WebGLBindingStates } from './WebGLBindingStates.js';
+
+
+/**
+* @constructor
+* @param {WebGLRenderingContext} gl
+* @param {WebGLAttributes} attributes
+* @param {WebGLExtensions} info
+* @param {WebGLBindingStates=} bindingStates
+*/
 function WebGLGeometries( gl, attributes, info, bindingStates ) {
 
 	const geometries = new WeakMap();

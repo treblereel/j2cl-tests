@@ -1,3 +1,14 @@
+import { WebGLExtensions } from './WebGLExtensions.js';
+import { WebGLInfo } from './WebGLInfo.js';
+import { WebGLCapabilities } from './WebGLCapabilities.js';
+
+/**
+* @constructor
+* @param {WebGLRenderingContext} gl
+* @param {WebGLExtensions} extensions
+* @param {WebGLInfo} info
+* @param {WebGLCapabilities} capabilities
+*/
 function WebGLIndexedBufferRenderer( gl, extensions, info, capabilities ) {
 
 	const isWebGL2 = capabilities.isWebGL2;

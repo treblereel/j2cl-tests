@@ -3,6 +3,23 @@ import { WebGLProgram } from './WebGLProgram.js';
 import { ShaderLib } from '../shaders/ShaderLib.js';
 import { UniformsUtils } from '../shaders/UniformsUtils.js';
 
+
+import { WebGLRenderer } from './../WebGLRenderer.js';
+import { WebGLCapabilities } from './WebGLCapabilities.js';
+import { WebGLCubeMaps } from './WebGLCubeMaps.js';
+import { WebGLExtensions } from './WebGLExtensions.js';
+import { WebGLClipping } from './WebGLClipping.js';
+import { WebGLBindingStates } from './WebGLBindingStates.js';
+
+/**
+* @constructor
+* @param {WebGLRenderer} renderer
+* @param {WebGLCubeMaps} cubemaps
+* @param {WebGLExtensions} extensions
+* @param {WebGLCapabilities} capabilities
+* @param {WebGLBindingStates} bindingStates
+* @param {WebGLClipping} clipping
+*/
 function WebGLPrograms( renderer, cubemaps, extensions, capabilities, bindingStates, clipping ) {
 
 	const programs = [];

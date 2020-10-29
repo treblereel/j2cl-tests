@@ -8,6 +8,10 @@ import { WebGLState } from './webgl/WebGLState.js';
 import { Color } from '../math/Color.js';
 import { Vector4 } from '../math/Vector4.js';
 
+/**
+* @constructor
+* @param {Object=} parameters
+*/
 function WebGL2Renderer( parameters ) {
 
 	console.log( 'THREE.WebGL2Renderer', REVISION );

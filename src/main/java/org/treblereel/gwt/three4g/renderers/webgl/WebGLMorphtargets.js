@@ -10,6 +10,10 @@ function absNumericalSort( a, b ) {
 
 }
 
+/**
+* @constructor
+* @param {WebGLRenderingContext} gl
+*/
 function WebGLMorphtargets( gl ) {
 
 	const influencesList = {};
