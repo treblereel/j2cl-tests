@@ -1,7 +1,7 @@
 
 /**
 * @constructor
-* @param {function=} onLoad
+* @param {function()=} onLoad
 * @param {function(string, number, number)=} onProgress
 * @param {function(string)=} onError
 */

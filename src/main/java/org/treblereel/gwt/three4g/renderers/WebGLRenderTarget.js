@@ -11,8 +11,8 @@ import { Vector4 } from '../math/Vector4.js';
 
 /**
 * @constructor
-* @param {WebGLProperties} width
-* @param {WebGLProperties} height
+* @param {number} width
+* @param {number} height
 * @param {Object=} options
 * @extends {EventDispatcher}
 */
@@ -74,6 +74,7 @@ WebGLRenderTarget.prototype = Object.assign( Object.create( EventDispatcher.prot
 
 	},
 
+    /** @this {WebGLRenderTarget} */
 	copy: function ( source ) {
 
 		this.width = source.width;

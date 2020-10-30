@@ -3,18 +3,18 @@ import { NearestFilter } from '../constants.js';
 
 /**
 * @constructor
-* @param {TypedArray=} data;
-* @param {number=} width;
-* @param {number=} height;
-* @param {number=} format;
-* @param {number=} type;
-* @param {number=} mapping;
-* @param {number=} wrapS;
-* @param {number=} wrapT;
-* @param {number=} magFilter;
-* @param {number=} minFilter;
-* @param {number=} anisotropy;
-* @param {number=} encoding;
+* @param {TypedArray=} data
+* @param {number=} width
+* @param {number=} height
+* @param {number=} format
+* @param {number=} type
+* @param {number=} mapping
+* @param {number=} wrapS
+* @param {number=} wrapT
+* @param {number=} magFilter
+* @param {number=} minFilter
+* @param {number=} anisotropy
+* @param {number=} encoding
 * @extends {Texture}
 */
 function DataTexture( data, width, height, format, type, mapping, wrapS, wrapT, magFilter, minFilter, anisotropy, encoding ) {

@@ -4,16 +4,16 @@ import { NearestFilter, UnsignedShortType, UnsignedInt248Type, DepthFormat, Dept
 
 /**
 * @constructor
-* @param {number=} width;
-* @param {number=} height;
-* @param {number=} type;
-* @param {number=} mapping;
-* @param {number=} wrapS;
-* @param {number=} wrapT;
-* @param {number=} magFilter;
-* @param {number=} minFilter;
-* @param {number=} anisotropy;
-* @param {number=} format;
+* @param {number=} width
+* @param {number=} height
+* @param {number=} type
+* @param {number=} mapping
+* @param {number=} wrapS
+* @param {number=} wrapT
+* @param {number=} magFilter
+* @param {number=} minFilter
+* @param {number=} anisotropy
+* @param {number=} format
 * @extends {Texture}
 
 */

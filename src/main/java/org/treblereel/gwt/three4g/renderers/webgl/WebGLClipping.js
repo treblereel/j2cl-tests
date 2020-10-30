@@ -121,6 +121,13 @@ function WebGLClipping( properties ) {
 
 	}
 
+    /**
+    * @param {Array<Plane>=} planes
+    * @param {Camera=} camera
+    * @param {number=} dstOffset
+    * @param {boolean=} skipTransform
+    * @return {Array<number>}
+    */
 	function projectPlanes( planes, camera, dstOffset, skipTransform ) {
 
 		const nPlanes = planes !== null ? planes.length : 0;

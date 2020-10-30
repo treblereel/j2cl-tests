@@ -13,7 +13,6 @@ const Cache = {
 		this.files[ key ] = file;
 
 	},
-
 	get: function ( key ) {
 
 		if ( this.enabled === false ) return;
@@ -23,13 +22,11 @@ const Cache = {
 		return this.files[ key ];
 
 	},
-
 	remove: function ( key ) {
 
 		delete this.files[ key ];
 
 	},
-
 	clear: function () {
 
 		this.files = {};

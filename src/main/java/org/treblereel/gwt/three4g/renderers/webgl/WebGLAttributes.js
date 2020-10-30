@@ -5,11 +5,11 @@ import { InterleavedBufferAttribute } from '../../core/InterleavedBufferAttribut
 * @param {WebGLRenderingContext | WebGL2RenderingContext} gl
 * @param {{isWebGL2:boolean, precision: string, logarithmicDepthBuffer: boolean, maxTextures: number, maxVertexTextures: number, maxTextureSize: number, maxCubemapSize: number, maxAttributes: number, maxVertexUniforms: number, maxVaryings: number, maxFragmentUniforms: number, vertexTextures: boolean, floatFragmentTextures: boolean, floatVertexTextures: boolean}} capabilities
 
-* @return {{get: function(BufferAttribute | InterleavedBufferAttribute) : {buffer: WebGLBuffer, type: number,
+* @return {{get: function((BufferAttribute|InterleavedBufferAttribute)) : {buffer: WebGLBuffer, type: number,
                                                                                                 		bytesPerElement: number,
                                                                                                 		version: number},
-            remove: function(BufferAttribute | InterleavedBufferAttribute),
-            update: function(BufferAttribute | InterleavedBufferAttribute, number)}}
+            remove: function((BufferAttribute|InterleavedBufferAttribute)),
+            update: function((BufferAttribute|InterleavedBufferAttribute), number)}}
 */
 function WebGLAttributes( gl, capabilities ) {
 
@@ -109,7 +109,7 @@ function WebGLAttributes( gl, capabilities ) {
 
 	//
     /**
-    * @param {BufferAttribute | InterleavedBufferAttribute} attribute
+    * @param {BufferAttribute|InterleavedBufferAttribute} attribute
     * @return {{buffer:WebGLBuffer, type:number, bytesPerElement: number, version: number}}
     */
 	function get( attribute ) {

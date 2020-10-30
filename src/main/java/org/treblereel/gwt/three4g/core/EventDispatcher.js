@@ -2,10 +2,13 @@
  * https://github.com/mrdoob/eventdispatcher.js/
  */
 
+/**
+* @constructor
+*/
 function EventDispatcher() {}
 
 Object.assign( EventDispatcher.prototype, {
-
+    /** @this {EventDispatcher} */
 	addEventListener: function ( type, listener ) {
 
 		if ( this._listeners === undefined ) this._listeners = {};
@@ -25,7 +28,7 @@ Object.assign( EventDispatcher.prototype, {
 		}
 
 	},
-
+    /** @this {EventDispatcher} */
 	hasEventListener: function ( type, listener ) {
 
 		if ( this._listeners === undefined ) return false;
@@ -35,7 +38,7 @@ Object.assign( EventDispatcher.prototype, {
 		return listeners[ type ] !== undefined && listeners[ type ].indexOf( listener ) !== - 1;
 
 	},
-
+    /** @this {EventDispatcher} */
 	removeEventListener: function ( type, listener ) {
 
 		if ( this._listeners === undefined ) return;
@@ -56,7 +59,7 @@ Object.assign( EventDispatcher.prototype, {
 		}
 
 	},
-
+    /** @this {EventDispatcher} */
 	dispatchEvent: function ( event ) {
 
 		if ( this._listeners === undefined ) return;

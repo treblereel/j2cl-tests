@@ -3,16 +3,16 @@ import { CubeReflectionMapping, RGBFormat } from '../constants.js';
 
 /**
 * @constructor
-* @param {Array<HTMLImageElement>=} images;
-* @param {number=} mapping;
-* @param {number=} wrapS;
-* @param {number=} wrapT;
-* @param {number=} magFilter;
-* @param {number=} minFilter;
-* @param {number=} format;
-* @param {number=} type;
-* @param {number=} anisotropy;
-* @param {number=} encoding;
+* @param {(Array<HTMLImageElement>|Array<HTMLCanvasElement>|Array<HTMLVideoElement>)=} images
+* @param {number=} mapping
+* @param {number=} wrapS
+* @param {number=} wrapT
+* @param {number=} magFilter
+* @param {number=} minFilter
+* @param {number=} format
+* @param {number=} type
+* @param {number=} anisotropy
+* @param {number=} encoding
 * @extends {Texture}
 */
 function CubeTexture( images, mapping, wrapS, wrapT, magFilter, minFilter, format, type, anisotropy, encoding ) {

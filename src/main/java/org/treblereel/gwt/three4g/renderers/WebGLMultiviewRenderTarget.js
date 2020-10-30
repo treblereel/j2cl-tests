@@ -5,6 +5,25 @@
 
 import { WebGLRenderTarget } from './WebGLRenderTarget.js';
 
+/**
+* @constructor
+* @param {number} width
+* @param {number} height
+* @param {number} numViews
+* @param {{wrapS: number,
+           	wrapT: number,
+           	magFilter: number,
+           	minFilter: number,
+           	format: number,
+           	type: number,
+           	anisotropy: number,
+           	depthBuffer: boolean,
+           	stencilBuffer: boolean,
+           	generateMipmaps: boolean,
+           	depthTexture: number,
+           	encoding: number}=} options
+* @extends {WebGLRenderTarget}
+*/
 function WebGLMultiviewRenderTarget( width, height, numViews, options ) {
 
 	WebGLRenderTarget.call( this, width, height, options );
@@ -22,6 +41,7 @@ WebGLMultiviewRenderTarget.prototype = Object.assign( Object.create( WebGLRender
 
 	isWebGLMultiviewRenderTarget: true,
 
+    /** @this {WebGLMultiviewRenderTarget} */
 	copy: function ( source ) {
 
 		WebGLRenderTarget.prototype.copy.call( this, source );

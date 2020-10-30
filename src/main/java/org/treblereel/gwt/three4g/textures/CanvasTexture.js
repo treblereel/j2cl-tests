@@ -2,15 +2,15 @@ import { Texture } from './Texture.js';
 
 /**
 * @constructor
-* @param {HTMLImageElement | HTMLCanvasElement | HTMLVideoElement} canvas;
-* @param {number=} mapping;
-* @param {number=} wrapS;
-* @param {number=} wrapT;
-* @param {number=} magFilter;
-* @param {number=} minFilter;
-* @param {number=} format;
-* @param {number=} type;
-* @param {number=} anisotropy;
+* @param {HTMLImageElement | HTMLCanvasElement | HTMLVideoElement} canvas
+* @param {number=} mapping
+* @param {number=} wrapS
+* @param {number=} wrapT
+* @param {number=} magFilter
+* @param {number=} minFilter
+* @param {number=} format
+* @param {number=} type
+* @param {number=} anisotropy
 * @extends {Texture}
 * @this {Texture}
 */
