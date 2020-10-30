@@ -3,7 +3,12 @@ import { Vector2 } from '../math/Vector2.js';
 import { Vector3 } from '../math/Vector3.js';
 import { Vector4 } from '../math/Vector4.js';
 import { Frustum } from '../math/Frustum.js';
+import { Camera } from './../cameras/Camera.js';
 
+/**
+* @constructor
+* @param {Camera=} camera
+*/
 function LightShadow( camera ) {
 
 	this.camera = camera;

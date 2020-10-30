@@ -1,5 +1,6 @@
 import { Material } from './Material.js';
 import { Color } from '../math/Color.js';
+import { Texture } from '../textures/Texture.js';
 
 /**
  * parameters = {
@@ -13,7 +14,8 @@ import { Color } from '../math/Color.js';
 
 /**
 * @constructor
-* @param {{}=} parameters
+* @param {{color: (Color|string|number), map: Texture, alphaMap: Texture, rotation: number, sizeAttenuation: boolean}=} parameters
+* @extends {Material}
 */
 function SpriteMaterial( parameters ) {
 

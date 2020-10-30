@@ -1,7 +1,6 @@
 package org.treblereel.gwt.three4g.core;
 
 import elemental2.core.TypedArray;
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsType;
 
 /**
@@ -57,12 +56,10 @@ public class InterleavedBuffer<T extends InterleavedBuffer> {
      */
     public boolean needsUpdate;
 
-    @JsConstructor
     InterleavedBuffer() {
 
     }
 
-    @JsConstructor
     public InterleavedBuffer(TypedArray array, int stride) {
 
     }

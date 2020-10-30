@@ -9,7 +9,8 @@ import { Color } from '../math/Color.js';
 
 /**
 * @constructor
-* @param {{}=} parameters
+* @param {{color: Color}=} parameters
+* @extends {Material}
 */
 function ShadowMaterial( parameters ) {
 

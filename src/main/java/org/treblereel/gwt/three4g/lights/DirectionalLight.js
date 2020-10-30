@@ -2,6 +2,12 @@ import { Light } from './Light.js';
 import { DirectionalLightShadow } from './DirectionalLightShadow.js';
 import { Object3D } from '../core/Object3D.js';
 
+/**
+* @constructor
+* @param {Color|string|number=} color
+* @param {number=} intensity
+* @extends {Object3D}
+*/
 function DirectionalLight( color, intensity ) {
 
 	Light.call( this, color, intensity );

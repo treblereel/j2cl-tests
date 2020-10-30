@@ -2,6 +2,7 @@ import { LinearFilter, LinearMipmapLinearFilter, ClampToEdgeWrapping } from '../
 import { FileLoader } from './FileLoader.js';
 import { DataTexture } from '../textures/DataTexture.js';
 import { Loader } from './Loader.js';
+import { LoadingManager } from './LoadingManager.js';
 
 /**
  * Abstract Base class to load generic binary textures formats (rgbe, hdr, ...)
@@ -9,6 +10,11 @@ import { Loader } from './Loader.js';
  * Sub classes have to implement the parse() method which will be used in load().
  */
 
+/**
+* @constructor
+* @param {LoadingManager=} manager
+* @extends {Loader}
+*/
 function DataTextureLoader( manager ) {
 
 	Loader.call( this, manager );

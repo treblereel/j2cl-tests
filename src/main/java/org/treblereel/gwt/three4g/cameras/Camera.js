@@ -2,6 +2,10 @@ import { Matrix4 } from '../math/Matrix4.js';
 import { Object3D } from '../core/Object3D.js';
 import { Vector3 } from '../math/Vector3.js';
 
+/**
+* @constructor
+* @extends {Object3D}
+*/
 function Camera() {
 
 	Object3D.call( this );

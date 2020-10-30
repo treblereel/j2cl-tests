@@ -4,6 +4,10 @@ import { Vector2 } from '../math/Vector2.js';
 import { Vector3 } from '../math/Vector3.js';
 import { Vector4 } from '../math/Vector4.js';
 
+/**
+* @constructor
+* @extends {LightShadow}
+*/
 function PointLightShadow() {
 
 	LightShadow.call( this, new PerspectiveCamera( 90, 1, 0.5, 500 ) );

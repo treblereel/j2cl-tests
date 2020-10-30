@@ -1,5 +1,13 @@
 import { Light } from './Light.js';
 
+/**
+* @constructor
+* @param {Color|string|number=} color
+* @param {number=} intensity
+* @param {number=} width
+* @param {number=} height
+* @extends {Light}
+*/
 function RectAreaLight( color, intensity, width, height ) {
 
 	Light.call( this, color, intensity );

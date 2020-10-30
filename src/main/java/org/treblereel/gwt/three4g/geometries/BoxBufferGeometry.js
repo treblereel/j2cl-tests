@@ -4,6 +4,14 @@ import { Vector3 } from '../math/Vector3.js';
 
 class BoxBufferGeometry extends BufferGeometry {
 
+    /**
+    * @param {number} width
+    * @param {number} height
+    * @param {number} depth
+    * @param {number=} widthSegments
+    * @param {number=} heightSegments
+    * @param {number=} depthSegments
+    */
 	constructor( width = 1, height = 1, depth = 1, widthSegments = 1, heightSegments = 1, depthSegments = 1 ) {
 
 		super();

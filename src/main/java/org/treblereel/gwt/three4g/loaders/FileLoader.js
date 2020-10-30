@@ -1,8 +1,14 @@
 import { Cache } from './Cache.js';
 import { Loader } from './Loader.js';
+import { LoadingManager } from './LoadingManager.js';
 
 const loading = {};
 
+/**
+* @constructor
+* @param {LoadingManager=} manager
+* @extends {Loader}
+*/
 function FileLoader( manager ) {
 
 	Loader.call( this, manager );

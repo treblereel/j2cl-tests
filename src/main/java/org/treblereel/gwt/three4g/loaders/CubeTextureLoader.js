@@ -1,7 +1,13 @@
 import { ImageLoader } from './ImageLoader.js';
 import { CubeTexture } from '../textures/CubeTexture.js';
 import { Loader } from './Loader.js';
+import { LoadingManager } from './LoadingManager.js';
 
+/**
+* @constructor
+* @param {LoadingManager=} manager
+* @extends {Loader}
+*/
 function CubeTextureLoader( manager ) {
 
 	Loader.call( this, manager );

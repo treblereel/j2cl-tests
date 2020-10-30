@@ -1,6 +1,12 @@
 import { Color } from '../math/Color.js';
 import { LightProbe } from './LightProbe.js';
 
+/**
+* @constructor
+* @param {Color|string|number=} color
+* @param {number=} intensity
+* @extends {LightProbe}
+*/
 function AmbientLightProbe( color, intensity ) {
 
 	LightProbe.call( this, undefined, intensity );

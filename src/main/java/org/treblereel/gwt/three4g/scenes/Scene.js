@@ -43,6 +43,10 @@ class Scene extends Object3D {
 
 	}
 
+    /**
+     * @param {string=} meta
+     * @return {*}
+     */
 	toJSON( meta ) {
 
 		const data = super.toJSON( meta );

@@ -1,6 +1,5 @@
 package org.treblereel.gwt.three4g.objects;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.core.AbstractGeometry;
 import org.treblereel.gwt.three4g.core.Object3D;
@@ -50,7 +49,6 @@ public class Mesh extends Object3D {
      */
     public float[] morphTargetDictionary;
 
-    @JsConstructor
     public Mesh() {
 
     }
@@ -58,7 +56,6 @@ public class Mesh extends Object3D {
     /**
      * @param geometry —  an instance of Geometry or BufferGeometry. Default is a new BufferGeometry.
      */
-    @JsConstructor
     public Mesh(AbstractGeometry geometry) {
 
     }
@@ -67,7 +64,6 @@ public class Mesh extends Object3D {
      * @param geometry —  an instance of Geometry or BufferGeometry. Default is a new BufferGeometry.
      * @param material —   a material. Default is a new MeshBasicMaterial with a random color.
      */
-    @JsConstructor
     public Mesh(AbstractGeometry geometry, Material material) {
 
     }
@@ -76,7 +72,6 @@ public class Mesh extends Object3D {
      * @param geometry —  an instance of Geometry or BufferGeometry. Default is a new BufferGeometry.
      * @param material —   an array of Material. Default is a new MeshBasicMaterial with a random color.
      */
-    @JsConstructor
     public Mesh(AbstractGeometry geometry, Material[] material) {
 
     }

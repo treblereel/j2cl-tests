@@ -1,7 +1,13 @@
 import { AudioContext } from '../audio/AudioContext.js';
 import { FileLoader } from './FileLoader.js';
 import { Loader } from './Loader.js';
+import { LoadingManager } from './LoadingManager.js';
 
+/**
+* @constructor
+* @param {LoadingManager=} manager
+* @extends {Loader}
+*/
 function AudioLoader( manager ) {
 
 	Loader.call( this, manager );

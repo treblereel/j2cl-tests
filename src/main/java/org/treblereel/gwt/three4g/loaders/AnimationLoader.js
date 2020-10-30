@@ -1,7 +1,13 @@
 import { AnimationClip } from '../animation/AnimationClip.js';
 import { FileLoader } from './FileLoader.js';
 import { Loader } from './Loader.js';
+import { LoadingManager } from './LoadingManager.js';
 
+/**
+* @constructor
+* @param {LoadingManager=} manager
+* @extends {Loader}
+*/
 function AnimationLoader( manager ) {
 
 	Loader.call( this, manager );

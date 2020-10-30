@@ -1,5 +1,10 @@
 import { DefaultLoadingManager } from './LoadingManager.js';
+import { LoadingManager } from './LoadingManager.js';
 
+/**
+* @constructor
+* @param {LoadingManager=} manager
+*/
 function Loader( manager ) {
 
 	this.manager = ( manager !== undefined ) ? manager : DefaultLoadingManager;

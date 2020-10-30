@@ -17,11 +17,6 @@ import { WebGLBindingStates } from './WebGLBindingStates.js';
 * @param {WebGLCubeMaps} cubemaps
 * @param {WebGLExtensions} extensions
 * @param {WebGLCapabilities} capabilities
-
-
-* @param {WebGLBindingStates} capabilities
-
-
 * @param {{ setup: function(Object3D, Material, WebGLProgram, BufferGeometry, BufferAttribute ),
              reset: function(),
              resetDefaultState: function(),

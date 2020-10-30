@@ -2,6 +2,7 @@ import { LinearFilter } from '../constants.js';
 import { FileLoader } from './FileLoader.js';
 import { CompressedTexture } from '../textures/CompressedTexture.js';
 import { Loader } from './Loader.js';
+import { LoadingManager } from './LoadingManager.js';
 
 /**
  * Abstract Base class to block based textures loader (dds, pvr, ...)
@@ -9,6 +10,11 @@ import { Loader } from './Loader.js';
  * Sub classes have to implement the parse() method which will be used in load().
  */
 
+/**
+* @constructor
+* @param {LoadingManager=} manager
+* @extends {Loader}
+*/
 function CompressedTextureLoader( manager ) {
 
 	Loader.call( this, manager );

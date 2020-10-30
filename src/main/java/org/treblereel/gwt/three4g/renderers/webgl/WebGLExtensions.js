@@ -1,4 +1,5 @@
 /**
+* @constructor
 * @param {WebGLRenderingContext} gl
 * @return {{has: (function(string): boolean), get: (function(string): *)}}
 */

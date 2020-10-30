@@ -1,6 +1,11 @@
 import { MathUtils } from '../math/MathUtils.js';
 import { StaticDrawUsage } from '../constants.js';
 
+/**
+* @constructor
+* @param {ArrayLike<number>=} array
+* @param {number=} stride
+*/
 function InterleavedBuffer( array, stride ) {
 
 	this.array = array;

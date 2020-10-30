@@ -2,6 +2,13 @@ import { Color } from '../math/Color.js';
 import { Vector3 } from '../math/Vector3.js';
 import { LightProbe } from './LightProbe.js';
 
+/**
+* @constructor
+* @param {Color|string|number=} skyColor
+* @param {Color|string|number=} groundColor
+* @param {number=} intensity
+* @extends {LightProbe}
+*/
 function HemisphereLightProbe( skyColor, groundColor, intensity ) {
 
 	LightProbe.call( this, undefined, intensity );

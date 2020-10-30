@@ -2,6 +2,10 @@ import { LightShadow } from './LightShadow.js';
 import { MathUtils } from '../math/MathUtils.js';
 import { PerspectiveCamera } from '../cameras/PerspectiveCamera.js';
 
+/**
+* @constructor
+* @extends {LightShadow}
+*/
 function SpotLightShadow() {
 
 	LightShadow.call( this, new PerspectiveCamera( 50, 1, 0.5, 500 ) );

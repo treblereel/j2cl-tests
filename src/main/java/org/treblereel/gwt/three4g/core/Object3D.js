@@ -27,6 +27,7 @@ const _removedEvent = { type: 'removed' };
 
 /**
 * @constructor
+* @extends {EventDispatcher}
 */
 function Object3D() {
 
@@ -623,6 +624,10 @@ Object3D.prototype = Object.assign( Object.create( EventDispatcher.prototype ), 
 
 	},
 
+    /**
+     * @param {string=} meta
+     * @return {*}
+     */
 	toJSON: function ( meta ) {
 
 		// meta is a string when called from JSON.stringify

@@ -1,6 +1,5 @@
 package org.treblereel.gwt.three4g.geometries;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsType;
 import org.treblereel.gwt.three4g.core.BufferGeometry;
 import org.treblereel.gwt.three4g.geometries.parameters.BoxGeometryParameters;
@@ -23,7 +22,6 @@ public class BoxBufferGeometry extends BufferGeometry<BoxBufferGeometry> {
      * @param height — Height of the sides on the Y axis. Default is 1.
      * @param depth  — Depth of the sides on the Z axis. Default is 1.
      */
-    @JsConstructor
     public BoxBufferGeometry(float width, float height, float depth) {
 
     }
@@ -36,7 +34,6 @@ public class BoxBufferGeometry extends BufferGeometry<BoxBufferGeometry> {
      * @param heightSegments — Optional. Number of segmented faces along the height of the sides. Default is 1.
      * @param depthSegments  — Optional. Number of segmented faces along the depth of the sides. Default is 1.
      */
-    @JsConstructor
     public BoxBufferGeometry(float width, float height, float depth, int widthSegments, int heightSegments, int depthSegments) {
 
     }

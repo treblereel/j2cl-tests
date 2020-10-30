@@ -1,3 +1,10 @@
+
+/**
+* @constructor
+* @param {function=} onLoad
+* @param {function(string, number, number)=} onProgress
+* @param {function(string)=} onError
+*/
 function LoadingManager( onLoad, onProgress, onError ) {
 
 	const scope = this;

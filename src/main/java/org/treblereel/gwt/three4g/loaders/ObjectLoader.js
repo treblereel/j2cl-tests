@@ -58,6 +58,9 @@ import * as Curves from '../extras/curves/Curves.js';
 
 class ObjectLoader extends Loader {
 
+    /**
+    * @param {LoadingManager=} manager
+    */
 	constructor( manager ) {
 
 		super( manager );

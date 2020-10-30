@@ -1,5 +1,10 @@
 import { PerspectiveCamera } from './PerspectiveCamera.js';
 
+/**
+* @constructor
+* @param {Array<PerspectiveCamera>=} array
+* @extends {PerspectiveCamera}
+*/
 function ArrayCamera( array ) {
 
 	PerspectiveCamera.call( this );

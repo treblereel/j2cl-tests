@@ -1,10 +1,18 @@
 import { Line } from './Line.js';
 import { Vector3 } from '../math/Vector3.js';
 import { Float32BufferAttribute } from '../core/BufferAttribute.js';
+import { Geometry } from '../core/Geometry.js';
+import { Material } from '../materials/Material.js';
+
 
 const _start = new Vector3();
 const _end = new Vector3();
 
+/**
+* @constructor
+* @param {Geometry=} geometry
+* @param {Material=} material
+*/
 function LineSegments( geometry, material ) {
 
 	Line.call( this, geometry, material );

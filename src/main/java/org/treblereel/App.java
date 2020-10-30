@@ -3,6 +3,7 @@ package org.treblereel;
 import elemental2.core.JsString;
 import elemental2.dom.DomGlobal;
 import jsinterop.base.Js;
+import org.treblereel.gwt.three4g.cameras.Camera;
 import org.treblereel.gwt.three4g.cameras.PerspectiveCamera;
 import org.treblereel.gwt.three4g.core.BufferGeometry;
 import org.treblereel.gwt.three4g.core.Geometry;
@@ -16,7 +17,9 @@ import org.treblereel.gwt.three4g.loaders.OnProgressCallback;
 import org.treblereel.gwt.three4g.loaders.OnProgressEvent;
 import org.treblereel.gwt.three4g.loaders.TextureLoader;
 import org.treblereel.gwt.three4g.materials.MeshBasicMaterial;
+import org.treblereel.gwt.three4g.materials.SpriteMaterial;
 import org.treblereel.gwt.three4g.materials.parameters.MeshBasicMaterialParameters;
+import org.treblereel.gwt.three4g.materials.parameters.SpriteMaterialParameters;
 import org.treblereel.gwt.three4g.math.Quaternion;
 import org.treblereel.gwt.three4g.objects.Mesh;
 import org.treblereel.gwt.three4g.renderers.WebGLRenderer;
@@ -39,27 +42,36 @@ public class App {
 
     public void onModuleLoad() {
 
-        Geometry g = new Geometry();
+        Quaternion q = new Quaternion();
 
-        DomGlobal.console.log("G 1 ? " + g.name);
-        DomGlobal.console.log("G 2 ? " + g.getId());
-        DomGlobal.console.log("G 3 ? " + g.isGeometry);
-        DomGlobal.console.log("G 4 ? " + g.getType());
+        DomGlobal.console.log("Quaternion 1 " + q.isQuaternion);
+        DomGlobal.console.log("Quaternion 2 " + q.clone().toArray().length);
 
-        BufferGeometry bg = new BufferGeometry();
+        SpriteMaterialParameters parameters = new SpriteMaterialParameters();
+        parameters.rotation = 100;
 
-        DomGlobal.console.log("G 1 ? " + bg.name);
-        DomGlobal.console.log("G 2 ? " + bg.getId());
-        DomGlobal.console.log("G 3 ? " + bg.isBufferGeometry);
-        DomGlobal.console.log("G 4 ? " + bg.getType());
+        SpriteMaterial spriteMaterial = new SpriteMaterial(parameters);
 
-/*        Quaternion q = new Quaternion();
+        DomGlobal.console.log("spriteMaterial 1 " + spriteMaterial.isSpriteMaterial);
+        DomGlobal.console.log("spriteMaterial 1 " + spriteMaterial.rotation);
 
-        DomGlobal.console.log("Quaternion " + q.isQuaternion + " " + q.clone().toArray().length);
+
+        Camera camera = new Camera();
+        //camera.updateMatrixWorld();
+
+
+        DomGlobal.console.log("JSON " + camera.isCamera);
+        DomGlobal.console.log("JSON " + camera.isObject);
+
+        Scene scene1 = new Scene();
+
+        DomGlobal.console.log("Scene " + scene1.toJSON());
+        DomGlobal.console.log("JSON " + camera.toJSON());
+
 
         //DomGlobal.console.log(" ShaderLib" + JSON.stringify(new ShaderLib()));
 
-        DomGlobal.console.log("? " + JSON.stringify(q));
+        /*DomGlobal.console.log("? " + JSON.stringify(q));
 
         new TextureLoader().setCrossOrigin("asdasd").setPath("aZZZZ");
         new TextureLoader().setPath("asdsad");*/

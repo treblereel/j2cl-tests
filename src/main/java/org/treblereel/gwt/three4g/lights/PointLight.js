@@ -1,6 +1,14 @@
 import { Light } from './Light.js';
 import { PointLightShadow } from './PointLightShadow.js';
 
+/**
+* @constructor
+* @param {Color|string|number=} color
+* @param {number=} intensity
+* @param {number=} distance
+* @param {number=} decay
+* @extends {Light}
+*/
 function PointLight( color, intensity, distance, decay ) {
 
 	Light.call( this, color, intensity );

@@ -1,6 +1,12 @@
 import { SphericalHarmonics3 } from '../math/SphericalHarmonics3.js';
 import { Light } from './Light.js';
 
+/**
+* @constructor
+* @param {SphericalHarmonics3=} sh
+* @param {number=} intensity
+* @extends {Light}
+*/
 function LightProbe( sh, intensity ) {
 
 	Light.call( this, undefined, intensity );

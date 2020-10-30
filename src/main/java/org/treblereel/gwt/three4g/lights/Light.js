@@ -1,6 +1,12 @@
 import { Object3D } from '../core/Object3D.js';
 import { Color } from '../math/Color.js';
 
+/**
+* @constructor
+* @param {Color|string|number=} color
+* @param {number=} intensity
+* @extends {Object3D}
+*/
 function Light( color, intensity ) {
 
 	Object3D.call( this );

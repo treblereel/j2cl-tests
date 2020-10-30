@@ -9,6 +9,13 @@ import { InstancedBufferAttribute } from '../core/InstancedBufferAttribute.js';
 import { InterleavedBufferAttribute } from '../core/InterleavedBufferAttribute.js';
 import { InterleavedBuffer } from '../core/InterleavedBuffer.js';
 
+import { LoadingManager } from './LoadingManager.js';
+
+/**
+* @constructor
+* @param {LoadingManager=} manager
+* @extends {Loader}
+*/
 function BufferGeometryLoader( manager ) {
 
 	Loader.call( this, manager );

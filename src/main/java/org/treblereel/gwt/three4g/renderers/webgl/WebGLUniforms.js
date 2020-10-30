@@ -847,7 +847,7 @@ function WebGLUniforms( gl, program ) {
 	this.seq = [];
 	this.map = {};
 
-	const n = gl.getProgramParameter( program, gl.ACTIVE_UNIFORMS );
+	const /** number */ n = gl.getProgramParameter( program, gl.ACTIVE_UNIFORMS );
 
 	for ( let i = 0; i < n; ++ i ) {
 

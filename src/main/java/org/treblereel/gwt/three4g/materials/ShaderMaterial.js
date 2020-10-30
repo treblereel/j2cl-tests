@@ -26,6 +26,7 @@ import default_fragment from '../renderers/shaders/ShaderChunk/default_fragment.
 /**
 * @constructor
 * @param {{}=} parameters
+* @extends {Material}
 */
 function ShaderMaterial( parameters ) {
 

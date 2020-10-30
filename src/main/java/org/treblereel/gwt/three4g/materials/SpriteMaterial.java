@@ -1,9 +1,8 @@
 package org.treblereel.gwt.three4g.materials;
 
-import jsinterop.annotations.JsConstructor;
 import jsinterop.annotations.JsOverlay;
 import jsinterop.annotations.JsType;
-import org.treblereel.gwt.three4g.materials.parameters.ShaderMaterialParameters;
+import org.treblereel.gwt.three4g.materials.parameters.SpriteMaterialParameters;
 import org.treblereel.gwt.three4g.math.Color;
 import org.treblereel.gwt.three4g.textures.Texture;
 
@@ -46,13 +45,11 @@ public class SpriteMaterial extends Material {
      */
     public boolean sizeAttenuation;
 
-    @JsConstructor
     public SpriteMaterial(){
 
     }
 
-    @JsConstructor
-    public SpriteMaterial(ShaderMaterialParameters parameters){
+    public SpriteMaterial(SpriteMaterialParameters parameters){
 
     }
 
