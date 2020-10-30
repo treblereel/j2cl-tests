@@ -18,7 +18,10 @@ import { BasicDepthPacking } from '../constants.js';
  *  wireframeLinewidth: <float>
  * }
  */
-
+/**
+* @constructor
+* @param {Object=} parameters
+*/
 function MeshDepthMaterial( parameters ) {
 
 	Material.call( this );

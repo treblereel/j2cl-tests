@@ -51,6 +51,10 @@ import { Color } from '../math/Color.js';
  * }
  */
 
+/**
+* @constructor
+* @param {{}=} parameters
+*/
 function MeshPhongMaterial( parameters ) {
 
 	Material.call( this );

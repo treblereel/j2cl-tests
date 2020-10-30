@@ -30,7 +30,10 @@ import { Color } from '../math/Color.js';
  *  morphNormals: <bool>
  * }
  */
-
+/**
+* @constructor
+* @param {{}=} parameters
+*/
 function MeshMatcapMaterial( parameters ) {
 
 	Material.call( this );

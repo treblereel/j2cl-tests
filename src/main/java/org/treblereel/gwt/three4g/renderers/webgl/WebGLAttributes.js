@@ -1,9 +1,15 @@
-import { WebGLCapabilities } from './WebGLCapabilities.js';
+import { BufferAttribute } from '../../core/BufferAttribute.js';
+import { InterleavedBufferAttribute } from '../../core/InterleavedBufferAttribute.js';
 
 /**
-* @constructor
 * @param {WebGLRenderingContext | WebGL2RenderingContext} gl
-* @param {WebGLCapabilities} capabilities
+* @param {{isWebGL2:boolean, precision: string, logarithmicDepthBuffer: boolean, maxTextures: number, maxVertexTextures: number, maxTextureSize: number, maxCubemapSize: number, maxAttributes: number, maxVertexUniforms: number, maxVaryings: number, maxFragmentUniforms: number, vertexTextures: boolean, floatFragmentTextures: boolean, floatVertexTextures: boolean}} capabilities
+
+* @return {{get: function(BufferAttribute | InterleavedBufferAttribute) : {buffer: WebGLBuffer, type: number,
+                                                                                                		bytesPerElement: number,
+                                                                                                		version: number},
+            remove: function(BufferAttribute | InterleavedBufferAttribute),
+            update: function(BufferAttribute | InterleavedBufferAttribute, number)}}
 */
 function WebGLAttributes( gl, capabilities ) {
 
@@ -102,7 +108,10 @@ function WebGLAttributes( gl, capabilities ) {
 	}
 
 	//
-
+    /**
+    * @param {BufferAttribute | InterleavedBufferAttribute} attribute
+    * @return {{buffer:WebGLBuffer, type:number, bytesPerElement: number, version: number}}
+    */
 	function get( attribute ) {
 
 		if ( attribute.isInterleavedBufferAttribute ) attribute = attribute.data;

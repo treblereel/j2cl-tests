@@ -4,7 +4,6 @@ import { ShaderChunk } from '../shaders/ShaderChunk.js';
 import { NoToneMapping, AddOperation, MixOperation, MultiplyOperation, CubeRefractionMapping, CubeUVRefractionMapping, CubeUVReflectionMapping, CubeReflectionMapping, PCFSoftShadowMap, PCFShadowMap, VSMShadowMap, ACESFilmicToneMapping, CineonToneMapping, CustomToneMapping, ReinhardToneMapping, LinearToneMapping, GammaEncoding, RGBDEncoding, RGBM16Encoding, RGBM7Encoding, RGBEEncoding, sRGBEncoding, LinearEncoding, LogLuvEncoding, GLSL3 } from '../../constants.js';
 
 import { WebGLRenderer } from './../WebGLRenderer.js';
-import { WebGLBindingStates } from './WebGLBindingStates.js';
 
 let programIdCount = 0;
 
@@ -383,7 +382,16 @@ function generateEnvMapBlendingDefine( parameters ) {
 * @param {WebGLRenderer} renderer
 * @param {string} cacheKey
 * @param {Object} parameters
-* @param {WebGLBindingStates=} bindingStates
+* @param {{ setup: function(Object3D, Material, WebGLProgram, BufferGeometry, BufferAttribute ),
+             reset: function(),
+             resetDefaultState: function(),
+             dispose: function(),
+             releaseStatesOfGeometry: function(),
+             releaseStatesOfProgram: function(),
+             initAttributes: function(),
+             enableAttribute: function(number),
+             disableUnusedAttributes: function()}=} bindingStates
+
 */
 function WebGLProgram( renderer, cacheKey, parameters, bindingStates ) {
 

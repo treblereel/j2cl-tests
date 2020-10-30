@@ -6,6 +6,14 @@ import { PropertyMixer } from './PropertyMixer.js';
 import { AnimationClip } from './AnimationClip.js';
 import { NormalAnimationBlendMode } from '../constants.js';
 
+import { Object3D } from '../core/Object3D.js';
+import { AnimationObjectGroup } from './AnimationObjectGroup.js';
+
+/**
+* @constructor
+* @param {Object3D | AnimationObjectGroup=} root
+* @extends {EventDispatcher}
+*/
 function AnimationMixer( root ) {
 
 	this._root = root;

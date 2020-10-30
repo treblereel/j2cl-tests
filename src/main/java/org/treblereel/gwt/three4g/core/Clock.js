@@ -1,5 +1,8 @@
 class Clock {
 
+    /**
+    * @param {boolean=} autoStart
+    */
 	constructor( autoStart ) {
 
 		this.autoStart = ( autoStart !== undefined ) ? autoStart : true;

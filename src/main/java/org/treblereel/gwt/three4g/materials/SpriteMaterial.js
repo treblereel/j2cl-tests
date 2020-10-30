@@ -11,6 +11,10 @@ import { Color } from '../math/Color.js';
  * }
  */
 
+/**
+* @constructor
+* @param {{}=} parameters
+*/
 function SpriteMaterial( parameters ) {
 
 	Material.call( this );

@@ -15,6 +15,10 @@ import { Color } from '../math/Color.js';
  * }
  */
 
+/**
+* @constructor
+* @param {{}=} parameters
+*/
 function PointsMaterial( parameters ) {
 
 	Material.call( this );

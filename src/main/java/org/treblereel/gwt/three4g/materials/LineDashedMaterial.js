@@ -12,7 +12,10 @@ import { LineBasicMaterial } from './LineBasicMaterial.js';
  *  gapSize: <float>
  * }
  */
-
+/**
+* @constructor
+* @param {{}=} parameters
+*/
 function LineDashedMaterial( parameters ) {
 
 	LineBasicMaterial.call( this );

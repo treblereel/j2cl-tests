@@ -1,5 +1,5 @@
 /**
-* @constructor
+* @return {{start: function (),stop: function (), setAnimationLoop: function (function), setContext: function ( Window )}}
 */
 function WebGLAnimation() {
 

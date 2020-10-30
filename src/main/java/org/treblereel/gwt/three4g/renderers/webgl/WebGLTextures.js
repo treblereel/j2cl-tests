@@ -1,22 +1,16 @@
 import { LinearFilter, LinearMipmapLinearFilter, LinearMipmapNearestFilter, NearestFilter, NearestMipmapLinearFilter, NearestMipmapNearestFilter, RGBFormat, RGBAFormat, DepthFormat, DepthStencilFormat, UnsignedShortType, UnsignedIntType, UnsignedInt248Type, FloatType, HalfFloatType, MirroredRepeatWrapping, ClampToEdgeWrapping, RepeatWrapping } from '../../constants.js';
 import { MathUtils } from '../../math/MathUtils.js';
 
-import { WebGLState } from './WebGLState.js';
-import { WebGLProperties } from './WebGLProperties.js';
-import { WebGLCapabilities } from './WebGLCapabilities.js';
-import { WebGLUtils } from './WebGLUtils.js';
-import { WebGLInfo } from './WebGLInfo.js';
 import { WebGLMultisampleRenderTarget } from './../WebGLMultisampleRenderTarget.js';
-
 /**
 * @constructor
 * @param {WebGLRenderingContext} _gl
-* @param {WebGLExtensions} extensions
-* @param {WebGLState} state
-* @param {WebGLProperties} properties
-* @param {WebGLCapabilities} capabilities
-* @param {WebGLUtils} utils
-* @param {WebGLInfo} info
+* @param {{has: (function(string): boolean), get: (function(string): *)}} extensions
+* @param {{buffers: {color: {setMask: function(boolean), setLocked: function(boolean), setClear: function( number, number, number, number, boolean), reset: function()}}, depth: {setTest : function(boolean), setMask : function(boolean), setFunc : function(number), setLocked : function(boolean), setClear : function(number), reset : function()}, stencil: { setTest : function(boolean), setMask : function(number), setFunc : function(number, number, number), setOp : function(number, number, number), setLocked : function(boolean) , setClear : function(number), reset : function() }}} state
+* @param {{get: (function(*): *), remove: (function(*)), update: (function(*, *, *): *), dispose: function(*)}} properties
+* @param {{isWebGL2:boolean, precision: string, logarithmicDepthBuffer: boolean, maxTextures: number, maxVertexTextures: number, maxTextureSize: number, maxCubemapSize: number, maxAttributes: number, maxVertexUniforms: number, maxVaryings: number, maxFragmentUniforms: number, vertexTextures: boolean, floatFragmentTextures: boolean, floatVertexTextures: boolean}} capabilities
+* @param {{convert: (function(*))}} utils
+* @param {{memory: {geometries: number, textures: number}, render: { frame: number, calls: number, triangles: number, points: number,lines: number}, programs: *, autoReset: boolean, reset: function(), update: function(number, number, number)}} info
 */
 function WebGLTextures( _gl, extensions, state, properties, capabilities, utils, info ) {
 

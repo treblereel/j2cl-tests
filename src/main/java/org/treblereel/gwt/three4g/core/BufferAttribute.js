@@ -6,7 +6,12 @@ import { StaticDrawUsage } from '../constants.js';
 
 const _vector = new Vector3();
 const _vector2 = new Vector2();
-
+/**
+* @constructor
+* @param {ArrayLike<number>} array
+* @param {number} itemSize
+* @param {boolean=} normalized
+*/
 function BufferAttribute( array, itemSize, normalized ) {
 
 	if ( Array.isArray( array ) ) {
@@ -409,6 +414,12 @@ Object.assign( BufferAttribute.prototype, {
 
 //
 
+/**
+* @constructor
+* @param {ArrayLike<number>} array
+* @param {number} itemSize
+* @param {boolean=} normalized
+*/
 function Int8BufferAttribute( array, itemSize, normalized ) {
 
 	BufferAttribute.call( this, new Int8Array( array ), itemSize, normalized );
@@ -418,7 +429,12 @@ function Int8BufferAttribute( array, itemSize, normalized ) {
 Int8BufferAttribute.prototype = Object.create( BufferAttribute.prototype );
 Int8BufferAttribute.prototype.constructor = Int8BufferAttribute;
 
-
+/**
+* @constructor
+* @param {ArrayLike<number>} array
+* @param {number} itemSize
+* @param {boolean=} normalized
+*/
 function Uint8BufferAttribute( array, itemSize, normalized ) {
 
 	BufferAttribute.call( this, new Uint8Array( array ), itemSize, normalized );
@@ -428,7 +444,12 @@ function Uint8BufferAttribute( array, itemSize, normalized ) {
 Uint8BufferAttribute.prototype = Object.create( BufferAttribute.prototype );
 Uint8BufferAttribute.prototype.constructor = Uint8BufferAttribute;
 
-
+/**
+* @constructor
+* @param {ArrayLike<number>} array
+* @param {number} itemSize
+* @param {boolean=} normalized
+*/
 function Uint8ClampedBufferAttribute( array, itemSize, normalized ) {
 
 	BufferAttribute.call( this, new Uint8ClampedArray( array ), itemSize, normalized );
@@ -438,7 +459,12 @@ function Uint8ClampedBufferAttribute( array, itemSize, normalized ) {
 Uint8ClampedBufferAttribute.prototype = Object.create( BufferAttribute.prototype );
 Uint8ClampedBufferAttribute.prototype.constructor = Uint8ClampedBufferAttribute;
 
-
+/**
+* @constructor
+* @param {ArrayLike<number>} array
+* @param {number} itemSize
+* @param {boolean=} normalized
+*/
 function Int16BufferAttribute( array, itemSize, normalized ) {
 
 	BufferAttribute.call( this, new Int16Array( array ), itemSize, normalized );
@@ -448,7 +474,12 @@ function Int16BufferAttribute( array, itemSize, normalized ) {
 Int16BufferAttribute.prototype = Object.create( BufferAttribute.prototype );
 Int16BufferAttribute.prototype.constructor = Int16BufferAttribute;
 
-
+/**
+* @constructor
+* @param {ArrayLike<number>} array
+* @param {number} itemSize
+* @param {boolean=} normalized
+*/
 function Uint16BufferAttribute( array, itemSize, normalized ) {
 
 	BufferAttribute.call( this, new Uint16Array( array ), itemSize, normalized );
@@ -458,7 +489,12 @@ function Uint16BufferAttribute( array, itemSize, normalized ) {
 Uint16BufferAttribute.prototype = Object.create( BufferAttribute.prototype );
 Uint16BufferAttribute.prototype.constructor = Uint16BufferAttribute;
 
-
+/**
+* @constructor
+* @param {ArrayLike<number>} array
+* @param {number} itemSize
+* @param {boolean=} normalized
+*/
 function Int32BufferAttribute( array, itemSize, normalized ) {
 
 	BufferAttribute.call( this, new Int32Array( array ), itemSize, normalized );
@@ -468,7 +504,12 @@ function Int32BufferAttribute( array, itemSize, normalized ) {
 Int32BufferAttribute.prototype = Object.create( BufferAttribute.prototype );
 Int32BufferAttribute.prototype.constructor = Int32BufferAttribute;
 
-
+/**
+* @constructor
+* @param {ArrayLike<number>} array
+* @param {number} itemSize
+* @param {boolean=} normalized
+*/
 function Uint32BufferAttribute( array, itemSize, normalized ) {
 
 	BufferAttribute.call( this, new Uint32Array( array ), itemSize, normalized );
@@ -478,7 +519,12 @@ function Uint32BufferAttribute( array, itemSize, normalized ) {
 Uint32BufferAttribute.prototype = Object.create( BufferAttribute.prototype );
 Uint32BufferAttribute.prototype.constructor = Uint32BufferAttribute;
 
-
+/**
+* @constructor
+* @param {ArrayLike<number>} array
+* @param {number} itemSize
+* @param {boolean=} normalized
+*/
 function Float32BufferAttribute( array, itemSize, normalized ) {
 
 	BufferAttribute.call( this, new Float32Array( array ), itemSize, normalized );
@@ -488,7 +534,12 @@ function Float32BufferAttribute( array, itemSize, normalized ) {
 Float32BufferAttribute.prototype = Object.create( BufferAttribute.prototype );
 Float32BufferAttribute.prototype.constructor = Float32BufferAttribute;
 
-
+/**
+* @constructor
+* @param {ArrayLike<number>} array
+* @param {number} itemSize
+* @param {boolean=} normalized
+*/
 function Float64BufferAttribute( array, itemSize, normalized ) {
 
 	BufferAttribute.call( this, new Float64Array( array ), itemSize, normalized );

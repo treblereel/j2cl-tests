@@ -1,3 +1,5 @@
+import { BufferAttribute } from '../core/BufferAttribute.js';
+
 class Vector4 {
 
 	constructor( x = 0, y = 0, z = 0, w = 1 ) {

@@ -25,7 +25,10 @@ import { Vector2 } from '../math/Vector2.js';
  *  morphNormals: <bool>
  * }
  */
-
+/**
+* @constructor
+* @param {{}=} parameters
+*/
 function MeshNormalMaterial( parameters ) {
 
 	Material.call( this );

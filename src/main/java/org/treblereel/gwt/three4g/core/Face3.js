@@ -3,6 +3,14 @@ import { Vector3 } from '../math/Vector3.js';
 
 class Face3 {
 
+    /**
+    * @param {number} a
+    * @param {number} b
+    * @param {number} c
+    * @param {Vector3=} normal
+    * @param {Color=} color
+    * @param {number=} materialIndex
+    */
 	constructor( a, b, c, normal, color, materialIndex ) {
 
 		this.a = a;

@@ -4,6 +4,14 @@ import { KeyframeTrack } from '../KeyframeTrack.js';
  * A Track of keyframe values that represent color.
  */
 
+/**
+* @constructor
+* @param {string} name
+* @param {Array} times
+* @param {Array} values
+* @param {number=} interpolation
+* @extends {KeyframeTrack}
+*/
 function ColorKeyframeTrack( name, times, values, interpolation ) {
 
 	KeyframeTrack.call( this, name, times, values, interpolation );

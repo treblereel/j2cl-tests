@@ -237,6 +237,11 @@ class Euler {
 
 	}
 
+    /**
+    * @param {Quaternion} q
+    * @param {string} order
+    * @param {boolean=} update
+    */
 	setFromQuaternion( q, order, update ) {
 
 		_matrix.makeRotationFromQuaternion( q );

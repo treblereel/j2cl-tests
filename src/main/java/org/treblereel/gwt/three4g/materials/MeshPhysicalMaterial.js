@@ -21,7 +21,10 @@ import { MathUtils } from '../math/MathUtils.js';
  *  transmissionMap: new THREE.Texture( <Image> )
  * }
  */
-
+/**
+* @constructor
+* @param {{}=} parameters
+*/
 function MeshPhysicalMaterial( parameters ) {
 
 	MeshStandardMaterial.call( this );

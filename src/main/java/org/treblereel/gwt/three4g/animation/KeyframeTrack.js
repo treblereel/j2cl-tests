@@ -8,6 +8,13 @@ import { LinearInterpolant } from '../math/interpolants/LinearInterpolant.js';
 import { DiscreteInterpolant } from '../math/interpolants/DiscreteInterpolant.js';
 import { AnimationUtils } from './AnimationUtils.js';
 
+/**
+* @constructor
+* @param {string=} name
+* @param {Array=} times
+* @param {Array=} values
+* @param {number=} interpolation
+*/
 function KeyframeTrack( name, times, values, interpolation ) {
 
 	if ( name === undefined ) throw new Error( 'THREE.KeyframeTrack: track name is undefined' );

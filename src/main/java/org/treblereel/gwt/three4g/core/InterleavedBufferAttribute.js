@@ -1,8 +1,16 @@
 import { Vector3 } from '../math/Vector3.js';
 import { BufferAttribute } from './BufferAttribute.js';
+import { InterleavedBuffer } from './InterleavedBuffer.js';
 
 const _vector = new Vector3();
 
+/**
+* @constructor
+* @param {InterleavedBuffer} interleavedBuffer
+* @param {number} itemSize
+* @param {number} offset
+* @param {boolean=} normalized
+*/
 function InterleavedBufferAttribute( interleavedBuffer, itemSize, offset, normalized ) {
 
 	this.name = '';

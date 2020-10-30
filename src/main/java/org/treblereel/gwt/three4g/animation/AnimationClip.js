@@ -9,6 +9,13 @@ import { VectorKeyframeTrack } from './tracks/VectorKeyframeTrack.js';
 import { MathUtils } from '../math/MathUtils.js';
 import { NormalAnimationBlendMode } from '../constants.js';
 
+/**
+* @constructor
+* @param {string=} name
+* @param {number=} duration
+* @param {Array<KeyframeTrack>=} tracks
+* @param {number=} blendMode
+*/
 function AnimationClip( name, duration, tracks, blendMode ) {
 
 	this.name = name;

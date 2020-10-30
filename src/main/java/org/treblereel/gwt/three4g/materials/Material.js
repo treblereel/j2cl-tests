@@ -4,6 +4,9 @@ import { MathUtils } from '../math/MathUtils.js';
 
 let materialId = 0;
 
+/**
+* @constructor
+*/
 function Material() {
 
 	Object.defineProperty( this, 'id', { value: materialId ++ } );

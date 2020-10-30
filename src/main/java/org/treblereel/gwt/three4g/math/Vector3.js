@@ -1,11 +1,12 @@
 import { MathUtils } from './MathUtils.js';
 import { Quaternion } from './Quaternion.js';
+import { BufferAttribute } from '../core/BufferAttribute.js';
 
 class Vector3 {
 
 	constructor( x = 0, y = 0, z = 0 ) {
 
-		Object.defineProperty( this, 'isVector3', { value: true } );
+		Object.defineProperty( this, /** @lends {Vector3.prototype} */ 'isVector3', { value: true } );
 
 		this.x = x;
 		this.y = y;

@@ -1,6 +1,6 @@
 /**
-* @constructor
 * @param {WebGLRenderingContext} gl
+* @return {{has: (function(string): boolean), get: (function(string): *)}}
 */
 function WebGLExtensions( gl ) {
 
@@ -47,6 +47,10 @@ function WebGLExtensions( gl ) {
 
 		},
 
+        /**
+        * @param {string} name
+        * @return {*}
+        */
 		get: function ( name ) {
 
 			if ( ! this.has( name ) ) {

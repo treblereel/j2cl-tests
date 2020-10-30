@@ -15,9 +15,13 @@ const _m1 = new Matrix4();
 const _obj = new Object3D();
 const _offset = new Vector3();
 
+/**
+* @constructor
+* @extends {EventDispatcher}
+*/
 function Geometry() {
 
-	Object.defineProperty( this, 'id', { value: _geometryId += 2 } );
+	Object.defineProperty( this, /** @lends {Geometry.prototype} */ 'id', { value: _geometryId += 2 } );
 
 	this.uuid = MathUtils.generateUUID();
 

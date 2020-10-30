@@ -23,6 +23,10 @@ import default_fragment from '../renderers/shaders/ShaderChunk/default_fragment.
  * }
  */
 
+/**
+* @constructor
+* @param {{}=} parameters
+*/
 function ShaderMaterial( parameters ) {
 
 	Material.call( this );

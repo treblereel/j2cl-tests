@@ -52,7 +52,10 @@ import { Color } from '../math/Color.js';
  *  morphNormals: <bool>
  * }
  */
-
+/**
+* @constructor
+* @param {{}=} parameters
+*/
 function MeshStandardMaterial( parameters ) {
 
 	Material.call( this );

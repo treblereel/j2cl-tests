@@ -95,7 +95,12 @@ Object.assign( Composite.prototype, {
 
 } );
 
-
+/**
+* @constructor
+* @param {*} rootNode
+* @param {string} path
+* @param {*=} parsedPath
+*/
 function PropertyBinding( rootNode, path, parsedPath ) {
 
 	this.path = path;

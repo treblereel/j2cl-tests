@@ -41,7 +41,10 @@ import { Color } from '../math/Color.js';
  *  morphNormals: <bool>
  * }
  */
-
+/**
+* @constructor
+* @param {{}=} parameters
+*/
 function MeshToonMaterial( parameters ) {
 
 	Material.call( this );

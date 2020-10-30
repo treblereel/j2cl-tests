@@ -11,7 +11,10 @@ import { Color } from '../math/Color.js';
  *  linejoin: "round"
  * }
  */
-
+/**
+* @constructor
+* @param {{}=} parameters
+*/
 function LineBasicMaterial( parameters ) {
 
 	Material.call( this );

@@ -4,7 +4,6 @@ import { arrayMax } from '../../utils.js';
 
 import { WebGLAttributes } from './WebGLAttributes.js';
 import { WebGLInfo } from './WebGLInfo.js';
-import { WebGLBindingStates } from './WebGLBindingStates.js';
 
 
 /**
@@ -12,7 +11,15 @@ import { WebGLBindingStates } from './WebGLBindingStates.js';
 * @param {WebGLRenderingContext} gl
 * @param {WebGLAttributes} attributes
 * @param {WebGLExtensions} info
-* @param {WebGLBindingStates=} bindingStates
+* @param {{ setup: function(Object3D, Material, WebGLProgram, BufferGeometry, BufferAttribute ),
+             reset: function(),
+             resetDefaultState: function(),
+             dispose: function(),
+             releaseStatesOfGeometry: function(),
+             releaseStatesOfProgram: function(),
+             initAttributes: function(),
+             enableAttribute: function(number),
+             disableUnusedAttributes: function()}=} bindingStates
 */
 function WebGLGeometries( gl, attributes, info, bindingStates ) {
 

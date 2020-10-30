@@ -6,6 +6,14 @@ import { QuaternionLinearInterpolant } from '../../math/interpolants/QuaternionL
  * A Track of quaternion keyframe values.
  */
 
+/**
+* @constructor
+* @param {string} name
+* @param {Array} times
+* @param {Array} values
+* @param {number=} interpolation
+* @extends {KeyframeTrack}
+*/
 function QuaternionKeyframeTrack( name, times, values, interpolation ) {
 
 	KeyframeTrack.call( this, name, times, values, interpolation );

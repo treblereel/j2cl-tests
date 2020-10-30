@@ -19,6 +19,9 @@ const _box = new Box3();
 const _boxMorphTargets = new Box3();
 const _vector = new Vector3();
 
+/**
+* @constructor
+*/
 function BufferGeometry() {
 
 	Object.defineProperty( this, 'id', { value: _bufferGeometryId += 2 } );

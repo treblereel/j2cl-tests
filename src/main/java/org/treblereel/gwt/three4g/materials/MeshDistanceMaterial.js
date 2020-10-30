@@ -21,7 +21,10 @@ import { Vector3 } from '../math/Vector3.js';
  *
  * }
  */
-
+/**
+* @constructor
+* @param {Object=} parameters
+*/
 function MeshDistanceMaterial( parameters ) {
 
 	Material.call( this );

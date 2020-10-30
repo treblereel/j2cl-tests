@@ -17,7 +17,20 @@ import { WebGLBindingStates } from './WebGLBindingStates.js';
 * @param {WebGLCubeMaps} cubemaps
 * @param {WebGLExtensions} extensions
 * @param {WebGLCapabilities} capabilities
-* @param {WebGLBindingStates} bindingStates
+
+
+* @param {WebGLBindingStates} capabilities
+
+
+* @param {{ setup: function(Object3D, Material, WebGLProgram, BufferGeometry, BufferAttribute ),
+             reset: function(),
+             resetDefaultState: function(),
+             dispose: function(),
+             releaseStatesOfGeometry: function(),
+             releaseStatesOfProgram: function(),
+             initAttributes: function(),
+             enableAttribute: function(number),
+             disableUnusedAttributes: function()}=} bindingStates
 * @param {WebGLClipping} clipping
 */
 function WebGLPrograms( renderer, cubemaps, extensions, capabilities, bindingStates, clipping ) {

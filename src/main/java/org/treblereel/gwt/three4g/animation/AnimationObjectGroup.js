@@ -29,7 +29,9 @@ import { MathUtils } from '../math/MathUtils.js';
  *  - A single property can either be controlled through a
  *    target group or directly, but not both.
  */
-
+/**
+* @constructor
+*/
 function AnimationObjectGroup() {
 
 	this.uuid = MathUtils.generateUUID();

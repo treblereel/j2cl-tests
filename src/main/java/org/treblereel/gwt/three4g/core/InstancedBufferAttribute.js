@@ -1,5 +1,13 @@
 import { BufferAttribute } from './BufferAttribute.js';
 
+/**
+* @constructor
+* @param {ArrayLike<number>} array
+* @param {number} itemSize
+* @param {boolean=} normalized
+* @param {number=} meshPerAttribute
+* @extends {BufferAttribute}
+*/
 function InstancedBufferAttribute( array, itemSize, normalized, meshPerAttribute ) {
 
 	if ( typeof ( normalized ) === 'number' ) {

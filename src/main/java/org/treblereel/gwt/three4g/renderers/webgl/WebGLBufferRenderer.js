@@ -1,14 +1,9 @@
-import { WebGLExtensions } from "./WebGLExtensions.js";
-import { WebGLInfo } from "./WebGLInfo.js";
-import { WebGLCapabilities } from "./WebGLCapabilities.js";
-
-
 /**
 * @constructor
 * @param {WebGLRenderingContext} gl
-* @param {WebGLExtensions} extensions
-* @param {WebGLInfo} info
-* @param {WebGLCapabilities} capabilities
+* @param {{has: (function(string): boolean), get: (function(string): *)}} extensions
+* @param {{memory: {geometries: number, textures: number}, render: { frame: number, calls: number, triangles: number, points: number,lines: number}, programs: *, autoReset: boolean, reset: function(), update: function(number, number, number)}} info
+* @param {{isWebGL2:boolean, precision: string, logarithmicDepthBuffer: boolean, maxTextures: number, maxVertexTextures: number, maxTextureSize: number, maxCubemapSize: number, maxAttributes: number, maxVertexUniforms: number, maxVaryings: number, maxFragmentUniforms: number, vertexTextures: boolean, floatFragmentTextures: boolean, floatVertexTextures: boolean}} capabilities
 */
 function WebGLBufferRenderer( gl, extensions, info, capabilities ) {
 

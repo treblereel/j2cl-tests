@@ -1,7 +1,7 @@
 
 /**
-* @constructor
 * @param {WebGLRenderingContext} gl
+* @return {{memory: {geometries: number, textures: number}, render: { frame: number, calls: number, triangles: number, points: number,lines: number}, programs: *, autoReset: boolean, reset: function(), update: function(number, number, number)}}
 */
 function WebGLInfo( gl ) {
 

@@ -3,8 +3,8 @@ import { WebGLCubeRenderTarget } from '../WebGLCubeRenderTarget.js';
 import { WebGLRenderer } from '../WebGLRenderer.js';
 
 /**
-* @constructor
 * @param {WebGLRenderer} renderer
+* @return {{get : function(*): *, dispose: function() }}
 */
 function WebGLCubeMaps( renderer ) {
 

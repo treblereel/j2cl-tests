@@ -1,19 +1,19 @@
 import { NotEqualDepth, GreaterDepth, GreaterEqualDepth, EqualDepth, LessEqualDepth, LessDepth, AlwaysDepth, NeverDepth, CullFaceFront, CullFaceBack, CullFaceNone, DoubleSide, BackSide, CustomBlending, MultiplyBlending, SubtractiveBlending, AdditiveBlending, NoBlending, NormalBlending, AddEquation, SubtractEquation, ReverseSubtractEquation, MinEquation, MaxEquation, ZeroFactor, OneFactor, SrcColorFactor, SrcAlphaFactor, SrcAlphaSaturateFactor, DstColorFactor, DstAlphaFactor, OneMinusSrcColorFactor, OneMinusSrcAlphaFactor, OneMinusDstColorFactor, OneMinusDstAlphaFactor } from '../../constants.js';
 import { Vector4 } from '../../math/Vector4.js';
 
-import { WebGLExtensions } from './WebGLExtensions.js';
-import { WebGLCapabilities } from './WebGLCapabilities.js';
-
 /**
-* @constructor
 * @param {WebGLRenderingContext} gl
-* @param {WebGLExtensions} extensions
-* @param {WebGLCapabilities} capabilities
+* @param {{has: (function(string): boolean), get: (function(string): *)}} extensions
+* @param {{isWebGL2:boolean, precision: string, logarithmicDepthBuffer: boolean, maxTextures: number, maxVertexTextures: number, maxTextureSize: number, maxCubemapSize: number, maxAttributes: number, maxVertexUniforms: number, maxVaryings: number, maxFragmentUniforms: number, vertexTextures: boolean, floatFragmentTextures: boolean, floatVertexTextures: boolean}} capabilities
+* @return {{buffers: {color: {setMask: function(boolean), setLocked: function(boolean), setClear: function( number, number, number, number, boolean), reset: function()}}, depth: {setTest : function(boolean), setMask : function(boolean), setFunc : function(number), setLocked : function(boolean), setClear : function(number), reset : function()}, stencil: { setTest : function(boolean), setMask : function(number), setFunc : function(number, number, number), setOp : function(number, number, number), setLocked : function(boolean) , setClear : function(number), reset : function() }}}
 */
 function WebGLState( gl, extensions, capabilities ) {
 
 	const isWebGL2 = capabilities.isWebGL2;
 
+    /**
+    * @constructor
+    */
 	function ColorBuffer() {
 
 		let locked = false;
@@ -73,6 +73,9 @@ function WebGLState( gl, extensions, capabilities ) {
 
 	}
 
+    /**
+    * @constructor
+    */
 	function DepthBuffer() {
 
 		let locked = false;
@@ -204,7 +207,9 @@ function WebGLState( gl, extensions, capabilities ) {
 		};
 
 	}
-
+    /**
+    * @constructor
+    */
 	function StencilBuffer() {
 
 		let locked = false;

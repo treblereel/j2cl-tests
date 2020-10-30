@@ -1,15 +1,14 @@
 
 /**
-* @constructor
+* @return {{get: (function(*): *), remove: (function(*)), update: (function(*, *, *): *), dispose: function(*)}}
 */
 function WebGLProperties() {
 
 	let properties = new WeakMap();
 
     /**
-    * @param {Object} object
-    * @return {Object}
-    * @this {WebGLProperties}
+    * @param {*} object
+    * @return {*}
     */
 	function get( object ) {
 

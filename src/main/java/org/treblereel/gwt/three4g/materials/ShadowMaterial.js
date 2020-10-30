@@ -7,6 +7,10 @@ import { Color } from '../math/Color.js';
  * }
  */
 
+/**
+* @constructor
+* @param {{}=} parameters
+*/
 function ShadowMaterial( parameters ) {
 
 	Material.call( this );

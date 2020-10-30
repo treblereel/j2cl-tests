@@ -1,4 +1,5 @@
 import { MathUtils } from './MathUtils.js';
+import { Euler } from './Euler.js';
 
 class Quaternion {
 
@@ -183,6 +184,10 @@ class Quaternion {
 
 	}
 
+    /**
+    * @param {Euler} euler
+    * @param {boolean=} update
+    */
 	setFromEuler( euler, update ) {
 		if ( ! ( euler && euler.isEuler ) ) {
 

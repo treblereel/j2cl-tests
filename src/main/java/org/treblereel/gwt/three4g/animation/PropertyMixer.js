@@ -1,5 +1,11 @@
 import { Quaternion } from '../math/Quaternion.js';
 
+/**
+* @constructor
+* @param {*} binding
+* @param {string} typeName
+* @param {number} valueSize
+*/
 function PropertyMixer( binding, typeName, valueSize ) {
 
 	this.binding = binding;

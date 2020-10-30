@@ -36,7 +36,10 @@ import { Color } from '../math/Color.js';
  *  morphNormals: <bool>
  * }
  */
-
+/**
+* @constructor
+* @param {{}=} parameters
+*/
 function MeshLambertMaterial( parameters ) {
 
 	Material.call( this );

@@ -5,6 +5,13 @@ import { KeyframeTrack } from '../KeyframeTrack.js';
  * A Track of Boolean keyframe values.
  */
 
+/**
+* @constructor
+* @param {string} name
+* @param {Array} times
+* @param {Array} values
+* @extends {KeyframeTrack}
+*/
 function BooleanKeyframeTrack( name, times, values ) {
 
 	KeyframeTrack.call( this, name, times, values );

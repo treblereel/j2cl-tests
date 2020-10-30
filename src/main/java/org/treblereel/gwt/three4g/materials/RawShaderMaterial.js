@@ -1,5 +1,9 @@
 import { ShaderMaterial } from './ShaderMaterial.js';
 
+/**
+* @constructor
+* @param {{}=} parameters
+*/
 function RawShaderMaterial( parameters ) {
 
 	ShaderMaterial.call( this, parameters );

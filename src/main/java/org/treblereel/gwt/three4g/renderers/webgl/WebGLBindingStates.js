@@ -1,13 +1,29 @@
-﻿import { WebGLExtensions } from './WebGLExtensions.js';
-import { WebGLAttributes } from './WebGLAttributes.js';
-import { WebGLCapabilities } from './WebGLCapabilities.js';
+﻿import { Object3D } from '../../core/Object3D.js';
+import { Material } from '../../materials/Material.js';
+import { WebGLProgram } from './WebGLProgram.js';
+import { BufferGeometry } from '../../core/BufferGeometry.js';
+import { BufferAttribute } from '../../core/BufferAttribute.js';
+import { InterleavedBufferAttribute } from '../../core/InterleavedBufferAttribute.js';
 
 /**
 * @constructor
 * @param {WebGLRenderingContext} gl
-* @param {WebGLExtensions} extensions
-* @param {WebGLAttributes} attributes
-* @param {WebGLCapabilities} capabilities
+* @param {{has: (function(string): boolean), get: (function(string): *)}} extensions
+* @param {{get: function((BufferAttribute|InterleavedBufferAttribute)): {buffer: WebGLBuffer, type: number,
+                                                                                                		bytesPerElement: number,
+                                                                                                		version: number},
+            remove: function((BufferAttribute|InterleavedBufferAttribute)),
+            update: function((BufferAttribute|InterleavedBufferAttribute), number)}} attributes
+* @param {{isWebGL2:boolean, precision: string, logarithmicDepthBuffer: boolean, maxTextures: number, maxVertexTextures: number, maxTextureSize: number, maxCubemapSize: number, maxAttributes: number, maxVertexUniforms: number, maxVaryings: number, maxFragmentUniforms: number, vertexTextures: boolean, floatFragmentTextures: boolean, floatVertexTextures: boolean}} capabilities
+* @return {{ setup: function(Object3D, Material, WebGLProgram, BufferGeometry, BufferAttribute ),
+             reset: function(),
+             resetDefaultState: function(),
+             dispose: function(),
+             releaseStatesOfGeometry: function(),
+             releaseStatesOfProgram: function(),
+             initAttributes: function(),
+             enableAttribute: function(number),
+             disableUnusedAttributes: function()}}
 */
 function WebGLBindingStates( gl, extensions, attributes, capabilities ) {
 
