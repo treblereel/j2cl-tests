@@ -5,171 +5,54 @@
 
   <groupId>org.treblereel</groupId>
   <artifactId>j2cl-tests</artifactId>
-  <packaging>war</packaging>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
 
   <properties>
     <webappdir>${project.build.directory}/webapp</webappdir>
     <webapp.libdir>${webappdir}/WEB-INF/lib</webapp.libdir>
     <maven.properties.plugin>1.0.0</maven.properties.plugin>
+
+    <maven.compiler.version>3.8.0</maven.compiler.version>
+    <maven.source.version>3.0.1</maven.source.version>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+
     <elemental2.version>1.1.0</elemental2.version>
     <j2cl.version>0.8-SNAPSHOT</j2cl.version>
     <j2cl.maven.version>0.16-SNAPSHOT</j2cl.maven.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <javaparser.core.version>3.15.18</javaparser.core.version>
+
+    <auto.common.version>0.10</auto.common.version>
+    <auto.service.version>1.0-rc6</auto.service.version>
   </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>com.google.elemental2</groupId>
-      <artifactId>elemental2-dom</artifactId>
-      <version>${elemental2.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>com.vertispan.j2cl</groupId>
-      <artifactId>junit-annotations</artifactId>
-      <version>${j2cl.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.vertispan.j2cl</groupId>
-      <artifactId>gwttestcase-emul</artifactId>
-      <version>${j2cl.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.vertispan.j2cl</groupId>
-      <artifactId>junit-emul</artifactId>
-      <version>${j2cl.version}</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-
-  </dependencies>
+  <modules>
+    <module>cldr</module>
+    <module>gwt-datetimeformat</module>
+    <module>gwt-numberformat</module>
+    <module>processor</module>
+  </modules>
 
   <build>
-    <resources>
-      <resource>
-        <directory>src/main/resources</directory>
-      </resource>
-    </resources>
-    <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.0</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
-      </plugin>
-      <plugin>
-        <artifactId>maven-source-plugin</artifactId>
-        <version>3.0.1</version>
-        <executions>
-          <execution>
-            <id>attach-sources</id>
-            <phase>package</phase>
-            <goals>
-              <goal>jar-no-fork</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-resources-plugin</artifactId>
-        <version>3.1.0</version>
-        <executions>
-          <execution>
-            <id>custom-resources</id>
-            <phase>process-resources</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${project.build.directory}</outputDirectory>
-              <resources>
-                <resource>
-                  <targetPath>${basedir}/target/webapp</targetPath>
-                  <directory>src/main/webapp</directory>
-                  <filtering>true</filtering>
-                </resource>
-                <resource>
-                  <targetPath>${basedir}/target/webapp/classes</targetPath>
-                  <directory>src/main/resources</directory>
-                  <filtering>false</filtering>
-                </resource>
-              </resources>
-              <encoding>UTF-8</encoding>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.12.4</version>
-        <configuration>
-          <skipTests>true</skipTests>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>com.vertispan.j2cl</groupId>
-        <artifactId>j2cl-maven-plugin</artifactId>
-        <version>${j2cl.maven.version}</version>
-        <executions>
-          <execution>
-            <id>build-js</id>
-            <phase>process-classes</phase>
-            <goals>
-              <goal>build</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <defaultWebappDirectory>${project.build.directory}/gwt/launcherDir</defaultWebappDirectory>
-          <compilationLevel>ADVANCED</compilationLevel>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.tomcat.maven</groupId>
-        <artifactId>tomcat7-maven-plugin</artifactId>
-        <version>2.2</version>
-        <configuration>
-          <contextFile>${basedir}/src/main/tomcatconf/context.xml</contextFile>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${maven.compiler.version}</version>
+          <configuration>
+            <source>${maven.compiler.source}</source>
+            <target>${maven.compiler.target}</target>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
 
-  <pluginRepositories>
-    <pluginRepository>
-      <id>vertispan-releases</id>
-      <name>Vertispan hosted artifacts-releases</name>
-      <url>https://repo.vertispan.com/j2cl</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </pluginRepository>
-    <pluginRepository>
-      <id>sonatype-snapshots-repo</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-      <snapshots>
-        <enabled>true</enabled>
-        <updatePolicy>daily</updatePolicy>
-        <checksumPolicy>fail</checksumPolicy>
-      </snapshots>
-    </pluginRepository>
-  </pluginRepositories>
+
+  </build>
 
   <repositories>
     <repository>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.treblereel</groupId>
+        <artifactId>j2cl-tests</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>numberformat</artifactId>
+    <packaging>gwt-lib</packaging>
+
+    <name>GWT NumberFormat</name>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.treblereel</groupId>
+            <artifactId>datetimeformat</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>net.ltgt.gwt.maven</groupId>
+                <artifactId>gwt-maven-plugin</artifactId>
+                <version>1.0-rc-9</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <moduleName>org.gwtproject.i18n.NumberFormat</moduleName>
+                    <sourceLevel>${maven.compiler.source}</sourceLevel>
+                    <failOnError>true</failOnError>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
