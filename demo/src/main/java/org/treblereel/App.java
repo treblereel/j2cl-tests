@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.stream.Collectors;
 
 import elemental2.dom.DomGlobal;
+import elemental2.dom.Event;
+import elemental2.dom.EventListener;
 import elemental2.dom.HTMLAnchorElement;
 import elemental2.dom.HTMLElement;
 import elemental2.dom.HTMLLIElement;
@@ -16,6 +18,8 @@ import org.gwtproject.i18n.client.DateTimeFormat;
 import org.gwtproject.i18n.client.NumberFormat;
 import org.gwtproject.i18n.shared.cldr.I18N;
 import org.gwtproject.i18n.shared.cldr.LocaleInfo;
+import org.gwtproject.i18n.shared.cldr.LocaleInfoImpl;
+import org.gwtproject.i18n.shared.cldr.impl.LocaleInfoFactory;
 
 @I18N({"en", "es", "de", "fr", "it", "ru"})
 public class App {
@@ -35,26 +39,6 @@ public class App {
 
     public void onModuleLoad() {
 
-        String[] locales = {"en", "es", "de", "fr", "it", "ru"};
-
-        HTMLElement ul = (HTMLElement) DomGlobal.document.createElement("ul");
-        DomGlobal.document.body.appendChild(ul);
-
-        for (String locale : locales) {
-            HTMLLIElement li = (HTMLLIElement) DomGlobal.document.createElement("li");
-            ul.appendChild(li);
-
-            HTMLAnchorElement btn = (HTMLAnchorElement) DomGlobal.document.createElement("a");
-            btn.textContent = locale;
-            btn.href = "?locale=" + locale + "#" + locale;
-
-            DomGlobal.window.onload = p0 -> {
-                updateLocaleTable();
-                return null;
-            };
-
-            li.appendChild(btn);
-        }
         tableElement = (HTMLTableElement) DomGlobal.document.createElement("table");
         tableElement.style.width = Js.uncheckedCast("40%");
         DomGlobal.document.body.appendChild(tableElement);
@@ -67,11 +51,12 @@ public class App {
         r6td2 = addRow("FullDateFormat");
         r7td2 = addRow("ScientificFormat");
         r8td2 = addRow("DecimalFormat");
+
+        updateLocaleTable();
     }
 
     private void updateLocaleTable() {
         LocaleInfo localeInfo = LocaleInfo.getCurrentLocale();
-
         r1td2.textContent = localeInfo.getLocaleName();
         r2td2.textContent = localeInfo.getNumberConstants().defCurrencyCode();
         r3td2.textContent = String.valueOf(localeInfo.isRTL());

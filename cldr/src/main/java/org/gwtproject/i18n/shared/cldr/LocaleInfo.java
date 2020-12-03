@@ -39,7 +39,7 @@ public class LocaleInfo {
    */
   //TODO replace with generated implementations
   private static LocaleInfo instance  = new LocaleInfo(
-          LocaleInfoFactory.create());
+          LocaleInfoFactory.get(System.getProperty("locale")));
 
 
 

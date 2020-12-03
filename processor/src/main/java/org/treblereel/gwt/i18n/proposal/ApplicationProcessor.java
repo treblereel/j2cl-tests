@@ -76,22 +76,9 @@ public class ApplicationProcessor extends AbstractProcessor {
             factory.append(newLine);
             factory.append("let LocaleInfoImpl__default = goog.forwardDeclare('org.gwtproject.i18n.shared.cldr.impl.LocaleInfoImpl$impl');").append(newLine);
 
-            //.split('?')[1]
-
-            factory.append("    console.log('1? ' + window.location.search);").append(newLine);
-            factory.append("    console.log('2? ' + window.location.search.split('?')[1]);").append(newLine);
-
-
-            factory.append("var locale = new URLSearchParams(window.location.search.split('?')[1]).get('locale');").append(newLine);
-
             factory.append("class Locale {").append(newLine);
             factory.append(" /** @return {LocaleInfoImpl} */").append(newLine);
-            factory.append(" static get() {").append(newLine);
-
-            factory.append("    console.log('locale' + locale);").append(newLine);
-
-
-
+            factory.append(" static get(locale) {").append(newLine);
             factory.append("    switch(locale) {").append(newLine);
 
             for (String locale : locales) {

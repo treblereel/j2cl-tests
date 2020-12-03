@@ -173,7 +173,7 @@
           <defaultWebappDirectory>${project.build.directory}/gwt/launcherDir</defaultWebappDirectory>
           <compilationLevel>ADVANCED</compilationLevel>
           <defines>
-            <locale>zu</locale>
+            <locale>ru</locale>
           </defines>
         </configuration>
       </plugin>
