@@ -11,8 +11,8 @@ import org.junit.Test;
 @J2clTestInput(DomTest.class)
 public class DomTest extends TestCase {
 
+    @Test
     public void testOne() {
-
         assertEquals(true, true);
 
     }

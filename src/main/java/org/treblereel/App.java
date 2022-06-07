@@ -1,8 +1,6 @@
 package org.treblereel;
 
 import elemental2.dom.DomGlobal;
-import elemental2.dom.Event;
-import elemental2.dom.EventListener;
 import elemental2.dom.HTMLButtonElement;
 
 public class App {
