@@ -14,7 +14,7 @@
     <maven.properties.plugin>1.0.0</maven.properties.plugin>
     <elemental2.version>1.1.0</elemental2.version>
     <j2cl.version>0.10.0-3c97afeac</j2cl.version>
-    <j2cl.maven.version>0.19</j2cl.maven.version>
+    <j2cl.maven.version>0.20</j2cl.maven.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
