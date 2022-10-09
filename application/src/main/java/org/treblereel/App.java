@@ -10,5 +10,8 @@ public class App {
         btn.textContent = "CLICK ME";
         btn.addEventListener("click", evt -> DomGlobal.window.alert("HELLO WORLD!"));
         DomGlobal.document.body.appendChild(btn);
+
+        DomGlobal.console.log(new Module1().fromModule1());
+        DomGlobal.console.log(new Module2().fromModule2());
     }
 }
