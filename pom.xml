@@ -11,6 +11,7 @@
         <module>module1</module>
         <module>module2</module>
         <module>application</module>
+        <module>web</module>
     </modules>
 
     <properties>
@@ -21,7 +22,7 @@
         <elemental2.version>1.1.0</elemental2.version>
         <j2cl.version>0.10.0-3c97afeac</j2cl.version>
 
-        <j2cl.maven.plugin.version>0.20</j2cl.maven.plugin.version>
+        <j2cl.maven.plugin.version>0.22-SNAPSHOT</j2cl.maven.plugin.version>
         <sources.maven.plugin.version>3.0.1</sources.maven.plugin.version>
         <surefire.maven.plugin.version>2.12.4</surefire.maven.plugin.version>
         <compiler.maven.plugin.version>3.8.1</compiler.maven.plugin.version>
@@ -90,24 +91,6 @@
                     <version>${surefire.maven.plugin.version}</version>
                     <configuration>
                         <skipTests>true</skipTests>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>com.vertispan.j2cl</groupId>
-                    <artifactId>j2cl-maven-plugin</artifactId>
-                    <version>${j2cl.maven.plugin.version}</version>
-                    <executions>
-                        <execution>
-                            <id>build-js</id>
-                            <phase>process-classes</phase>
-                            <goals>
-                                <goal>build</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                    <configuration>
-                        <webappDirectory>${project.build.directory}/j2cl-watch</webappDirectory>
-                        <compilationLevel>ADVANCED</compilationLevel>
                     </configuration>
                 </plugin>
             </plugins>
