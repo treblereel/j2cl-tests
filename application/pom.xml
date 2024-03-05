@@ -51,6 +51,12 @@
                             <goal>build</goal>
                         </goals>
                     </execution>
+                    <execution>
+                        <id>test</id>
+                        <goals>
+                            <goal>test</goal>
+                        </goals>
+                    </execution>
                 </executions>
                 <configuration>
                     <compilationLevel>ADVANCED</compilationLevel>

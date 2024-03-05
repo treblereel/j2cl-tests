@@ -1,15 +1,16 @@
 package org.treblereel;
 
 import com.google.j2cl.junit.apt.J2clTestInput;
-import junit.framework.TestCase;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author Dmitrii Tikhomirov
  * Created by treblereel 9/10/19
  */
 @J2clTestInput(BestTest.class)
-public class BestTest extends TestCase {
+public class BestTest {
 
     @Test
     public void testOne() {
